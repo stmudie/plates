@@ -1,0 +1,107 @@
+<!doctype html>
+<html>
+
+<head>
+
+  <title>Plate</title>
+
+  <meta name="viewport" 
+  content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+
+  <script src="{{ url_for('static', filename='bower_components/webcomponentsjs/webcomponents.js')}}"></script>
+  <script src="{{ url_for('static', filename='bower_components/knockout/dist/knockout.js')}}"></script>
+
+  <link rel="import" href="{{ url_for('static', filename='bower_components/font-roboto/roboto.html')}}">
+  <link rel="import" href="{{ url_for('static', filename='bower_components/core-scaffold/core-scaffold.html')}}">
+  <link rel="import" href="{{ url_for('static', filename='bower_components/core-item/core-item.html')}}">
+  <link rel="import" href="{{ url_for('static', filename='bower_components/core-menu/core-menu.html')}}">
+  <link rel="import" href="{{ url_for('static', filename='bower_components/core-pages/core-pages.html')}}">
+  <link rel="import" href="{{ url_for('static', filename='card-grid.html')}}">
+{#  <link rel="import" href="../bower_components/core-header-panel/core-header-panel.html">#}
+{#  <link rel="import" href="../bower_components/core-toolbar/core-toolbar.html">#}
+{#  <link rel="import" href="../bower_components/paper-tabs/paper-tabs.html">#}
+{#  <link rel="import" href="post-card.html">#}
+{#  <link rel="import" href="post-list.html">#}
+
+  <style>
+  html,body {
+    height: 100%;
+    margin: 0;
+    background-color: #E5E5E5;
+    font-family: 'RobotoDraft', sans-serif;
+  }
+  core-header-panel {
+      height: 100%;
+      overflow: auto;
+      -webkit-overflow-scrolling: touch;
+  }
+  core-toolbar {
+      background: #03a9f4;
+      color: #ffffff;
+  }
+  #tabs {
+      width: 100%;
+      margin: 0;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      text-transform: uppercase;
+  }
+  .container {
+    width: 80%;
+    margin: 50px auto;
+  }
+  @media (min-width: 481px) {
+    #tabs {
+      width: 200px;
+    }
+    .container {
+      width: 900px;
+    }
+  }
+  </style>
+
+</head>
+
+<body unresolved>
+    <core-scaffold drawerWidth = 200px>
+        <core-header-panel navigation flex mode="seamed">
+            <core-toolbar>Plate Scanner</core-toolbar>
+            <core-menu theme="core-light-theme">
+                <core-item icon="settings" label="Plate Detail"></core-item>
+                <core-item icon="settings" label="Scan"></core-item>
+            </core-menu>
+        </core-header-panel>
+        <div id="pageName" tool data-bind="text: pageName"></div>
+        <core-pages selected="0">
+            <div><card-grid></card-grid></div>
+            <div>Two</div>
+        </core-pages>
+    </core-scaffold>
+
+</body>
+
+<script>
+    var currentPageModel = {
+        pageName: ko.observable('Plate Detail')
+    };
+    ko.applyBindings(currentPageModel, document.querySelector("#pageName"));
+
+    var menu = document.querySelector('core-menu');
+
+    menu.addEventListener( 'core-select', function (evt) {
+        if (evt.detail.isSelected)  {
+            var scaffold = document.querySelector('core-scaffold');
+            currentPageModel.pageName(menu.selectedItem.label);
+
+            var pages = document.querySelector('core-pages');
+            pages.selected = menu.selected;
+
+            scaffold.togglePanel();
+        }
+    });
+
+</script>
+
+</html>

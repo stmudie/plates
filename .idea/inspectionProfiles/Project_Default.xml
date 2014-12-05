@@ -1,0 +1,38 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0" is_locked="false">
+    <option name="myName" value="Project Default" />
+    <option name="myLocal" value="false" />
+    <inspection_tool class="HtmlUnknownTag" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="myValues">
+        <value>
+          <list size="23">
+            <item index="0" class="java.lang.String" itemvalue="nobr" />
+            <item index="1" class="java.lang.String" itemvalue="noembed" />
+            <item index="2" class="java.lang.String" itemvalue="comment" />
+            <item index="3" class="java.lang.String" itemvalue="noscript" />
+            <item index="4" class="java.lang.String" itemvalue="embed" />
+            <item index="5" class="java.lang.String" itemvalue="script" />
+            <item index="6" class="java.lang.String" itemvalue="core-toolbar" />
+            <item index="7" class="java.lang.String" itemvalue="core-header-panel" />
+            <item index="8" class="java.lang.String" itemvalue="paper-tab" />
+            <item index="9" class="java.lang.String" itemvalue="paper-tabs" />
+            <item index="10" class="java.lang.String" itemvalue="content" />
+            <item index="11" class="java.lang.String" itemvalue="post-card" />
+            <item index="12" class="java.lang.String" itemvalue="core-scaffold" />
+            <item index="13" class="java.lang.String" itemvalue="core-menu" />
+            <item index="14" class="java.lang.String" itemvalue="core-item" />
+            <item index="15" class="java.lang.String" itemvalue="core-pages" />
+            <item index="16" class="java.lang.String" itemvalue="paper-checkbox" />
+            <item index="17" class="java.lang.String" itemvalue="core-icon-button" />
+            <item index="18" class="java.lang.String" itemvalue="paper-input" />
+            <item index="19" class="java.lang.String" itemvalue="input-card" />
+            <item index="20" class="java.lang.String" itemvalue="polymer-element" />
+            <item index="21" class="java.lang.String" itemvalue="shadow" />
+            <item index="22" class="java.lang.String" itemvalue="paper-dropdown" />
+          </list>
+        </value>
+      </option>
+      <option name="myCustomValuesEnabled" value="true" />
+    </inspection_tool>
+  </profile>
+</component>

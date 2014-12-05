@@ -1,0 +1,164 @@
+<link rel="import" href="bower_components/polymer/polymer.html">
+<link rel="import" href="bower_components/core-icon/core-icon.html">
+<link rel="import" href="bower_components/core-icon-button/core-icon-button.html">
+<link rel="import" href="bower_components/paper-dropdown/paper-dropdown.html">
+<link rel="import" href="bower_components/paper-input/paper-input.html">
+<link rel="import" href="bower_components/paper-checkbox/paper-checkbox.html">
+<link rel="import" href="bower_components/paper-icon-button/paper-icon-button.html">
+<link rel="import" href="bower_components/paper-dialog/paper-action-dialog.html">
+<link rel="import" href="bower_components/paper-button/paper-button.html">
+<link rel="import" href="bower_components/paper-input/paper-autogrow-textarea.html">
+<link rel="import" href="bower_components/paper-ripple/paper-ripple.html">
+
+<polymer-element name="x-trigger" extends="paper-icon-button" relative on-tap="{{ toggle }}" noink>
+    <template>
+        <shadow></shadow>
+        <content></content>
+    </template>
+    <script>
+        Polymer({
+            toggle: function () {
+                if (!this.dropdown) {
+                    this.dropdown = this.querySelector('paper-dropdown');
+                }
+                this.dropdown && this.dropdown.toggle();
+            }
+        });
+    </script>
+</polymer-element>
+<polymer-element name="input-card" draggable="true">
+    <template>
+        <style shim-shadowdom>
+            :host {
+                display: block;
+                position: relative;
+                color: #a4a4a4;
+                background-color: white;
+                padding: 20px;
+                width: 95%;
+                height: 100%;
+                font-size: 1.2rem;
+                font-weight: 300;
+            }
+
+            .card-header {
+                margin-top: 20px;
+                margin-bottom: 10px;
+            }
+
+            polyfill-next-selector {
+                content: '.card-header h2';
+            }
+
+            .card-header ::content h2 {
+                margin: 0;
+                font-size: 1.8rem;
+                font-weight: 300;
+            }
+
+            textarea {
+                background-color: rgb(245, 245, 245);
+            }
+
+            #selected {
+                position: absolute;
+                top: 3px;
+                right: 3px;
+                padding: 12px;
+            }
+
+            #clear {
+                color: #636363;
+            }
+
+            #clear:hover {
+                color: #be0000;
+            }
+
+            #delete {
+                color: #636363;
+            }
+
+            #delete:hover {
+                color: #be0000;
+            }
+
+            #clear_menu {
+                position: absolute;
+                top: 3px;
+                left: 3px;
+            }
+        </style>
+
+        <div class="card-header" layout horizontal center>
+            <content select=".sample"></content>
+        </div>
+        <x-trigger id="clear_menu" icon="menu">
+            <paper-dropdown>
+                <core-icon-button id="clear" draggable="false"
+                                  icon="clear"
+                                  active="false"
+                                  on-tap="{{ clearTapped }}">
+                </core-icon-button>
+                <core-icon-button id="delete" draggable="false"
+                                  icon="delete"
+                                  active="false"
+                                  on-tap="{{ deleteTapped }}">
+                </core-icon-button>
+            </paper-dropdown>
+        </x-trigger>
+        <paper-checkbox id="selected" checked="{{ selected }}" on-change="{{ selectedTapped }}"></paper-checkbox>
+
+        <content></content>
+
+
+        <template bind if = "{{ full }}">
+            <paper-autogrow-textarea rows=5 style="margin-top: 15px;">
+                <textarea placeholder="Description" value = "{{ description }}"></textarea>
+            </paper-autogrow-textarea>
+        </template>
+
+        <template bind if = "{{ !full }}">
+        <div horizontal center-justified layout>
+            <core-icon-button id="more" draggable="false"
+                              id="moreicon"
+                              icon="more-horiz"
+                              active="false"
+                              on-tap="{{ moreTapped }}">
+            </core-icon-button>
+        </div>
+        </template>
+
+    </template>
+    <script>
+        Polymer({
+            publish: {
+                selected: {
+                    value: true,
+                    reflect: true
+                },
+                uid: {
+                    value: 0,
+                    reflect: true
+                },
+                full: {
+                    value: false,
+                    reflect: true
+                },
+                description: {
+                    value: '',
+                    reflect: true
+                }
+            },
+            clearTapped: function (event, detail, sender) {
+                this.fire('clear-tap');
+            },
+            deleteTapped: function (event, detail, sender) {
+                this.fire('delete-tap');
+            },
+            moreTapped: function (event, detail, sender) {
+                this.fire('more-tap');
+            }
+        });
+    </script>
+</polymer-element>

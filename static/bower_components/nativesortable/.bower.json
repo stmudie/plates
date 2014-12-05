@@ -1,0 +1,26 @@
+{
+  "name": "nativesortable",
+  "main": "nativesortable.js",
+  "version": "0.0.1",
+  "homepage": "http://bgrins.github.io/nativesortable",
+  "authors": [
+    "Brian Grinstead"
+  ],
+  "description": "use native drag and drop APIs to provide sortable items",
+  "keywords": [
+    "sortable",
+    "html5",
+    "drag"
+  ],
+  "license": "MIT",
+  "_release": "0.0.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "0.0.1",
+    "commit": "f4e5da73d3a1952ed4e5ff03c2317af3ca43d2c1"
+  },
+  "_source": "git://github.com/bgrins/nativesortable.git",
+  "_target": "~0.0.1",
+  "_originalSource": "nativesortable",
+  "_direct": true
+}

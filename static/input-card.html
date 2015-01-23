@@ -1,14 +1,9 @@
 <link rel="import" href="bower_components/polymer/polymer.html">
-<link rel="import" href="bower_components/core-icon/core-icon.html">
 <link rel="import" href="bower_components/core-icon-button/core-icon-button.html">
 <link rel="import" href="bower_components/paper-dropdown/paper-dropdown.html">
-<link rel="import" href="bower_components/paper-input/paper-input.html">
 <link rel="import" href="bower_components/paper-checkbox/paper-checkbox.html">
 <link rel="import" href="bower_components/paper-icon-button/paper-icon-button.html">
-<link rel="import" href="bower_components/paper-dialog/paper-action-dialog.html">
-<link rel="import" href="bower_components/paper-button/paper-button.html">
 <link rel="import" href="bower_components/paper-input/paper-autogrow-textarea.html">
-<link rel="import" href="bower_components/paper-ripple/paper-ripple.html">
 
 <polymer-element name="x-trigger" extends="paper-icon-button" relative on-tap="{{ toggle }}" noink>
     <template>
@@ -37,7 +32,7 @@
                 padding: 20px;
                 width: 95%;
                 height: 100%;
-                font-size: 1.2rem;
+                font-size: 1rem;
                 font-weight: 300;
             }
 
@@ -91,7 +86,7 @@
         </style>
 
         <div class="card-header" layout horizontal center>
-            <content select=".sample"></content>
+            <content select=".title"></content>
         </div>
         <x-trigger id="clear_menu" icon="menu">
             <paper-dropdown>

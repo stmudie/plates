@@ -1,12 +1,10 @@
 <link rel="import" href="bower_components/polymer/polymer.html">
 <link rel="import" href="input-card.html">
 <script src="bower_components/nativesortable/nativesortable.js"></script>
-<script src="bower_components/knockout/dist/knockout.js"></script>
-<link rel="import" href="bower_components/core-label/core-label.html">
-<link rel="import" href="bower_components/paper-input/paper-input.html">
 <link rel="import" href="bower_components/paper-fab/paper-fab.html">
 <link rel="import" href="bower_components/paper-dialog/paper-dialog.html">
-<link rel="import" href="bower_components/paper-checkbox/paper-checkbox.html">
+<link rel="import" href="bower_components/core-tooltip/core-tooltip.html">
+<link rel="import" href="card-chooser.html">
 
 <polymer-element name="card-grid">
     <template>
@@ -30,9 +28,9 @@
 
             li {
                 position: relative;
-                flex: 0 0 8%;
-                height: 140px;
-                margin: 2% 2% 50px;
+                flex: 0 0 {{ (100/gridwidth)-2.4 }}%;
+                height: {{  cardheight }}px;
+                margin: 1.2% 1.2% 50px;
             }
 
             [draggable] {
@@ -75,65 +73,60 @@
             .sub_fab_show:hover {
                 background-color: red;
             }
+            core-tooltip::shadow .core-tooltip {
+                background: rgba(80, 80, 80, 0.8);
+                color: rgb(220, 220, 220);
+                line-height: 12px;
+                font-size: 12px;
+                font-weight: bold;
+                margin-top: 0;
+            }
+
         </style>
         <div id="toplevel">
             <div id="fab_group" on-mouseover = "{{ handleHoverAdd }}" on-mouseout = "{{ handleHoverEnd }}" style="width: 150px; padding: 5px;" horizontal justified layout center>
-                <paper-fab id="fabadd" icon="{{ icon }}" title="add" class = "fabadd"></paper-fab>
-                <paper-fab id="addgrid" icon="view-module" title="add grid" mini on-tap="{{ handleAddCard }}" class = "sub_fab" ></paper-fab>
-                <paper-fab id="addone" icon="note-add" title="add one card" mini on-tap="{{ handleAddCard }}" class = "sub_fab"></paper-fab>
+                <paper-fab id="fabadd" icon="{{ icon }}" class = "fabadd"></paper-fab>
+                <core-tooltip label="8×5 Grid" noarrow="True">
+                    <!--<paper-fab id="addgrid" icon="view-module"  mini on-tap="{{ handleAddCard }}" class = "sub_fab" ></paper-fab>-->
+                    <paper-fab id="add8x5grid" src="8x5.png"  mini on-tap="{{ handleAddCard }}" class = "sub_fab" ></paper-fab>
+                </core-tooltip>
+                <core-tooltip label="96 Well" noarrow="True">
+                    <!--<paper-fab id="add96Well" icon="note-add" mini on-tap="{{ handleAddCard }}" class = "sub_fab"></paper-fab>-->
+                    <paper-fab id="add96Well" src="96Well.png" mini on-tap="{{ handleAddCard }}" class = "sub_fab"></paper-fab>
+                </core-tooltip>
             </div>
             <ul id='sortable' class='sortable'>
                 <template repeat="{{sample in samples.samples}}">
-                    <style>
-                        paper-checkbox.blue::shadow #ink[checked] {
-                            color: #4285f4;
-                        }
-                        paper-checkbox.blue::shadow #checkbox.checked {
-                            border-color: #4285f4;
-                        }
-                    </style>
                     <li>
-                        <input-card uid="{{ sample.uid }}" selected="{{ sample.selected }}" description="{{ sample.description }}" on-clear-tap="{{ handleClear }}" on-delete-tap="{{ handleClear }}" on-more-tap="{{ handleMore }}"
-                                   class="card">
-
-                            <paper-input draggable="false" value="{{ sample.username }}" label="Sample Name"
-                                         class="sample"></paper-input>
-                            <core-label center horizontal layout style="width: 100px">
-                                <paper-checkbox flex class="blue" checked="{{ sample.subgrid }}" for></paper-checkbox>
-                                <div>Sub Grid</div>
-                            </core-label>
-
-                        </input-card>
+                        <!--<sample-scan-card sample = "{{ sample }}" on-more-tap="{{ handleMore }}" on-clear-tap="{{ handleClear }}" on-delete-tap="{{ handleClear }}"></sample-scan-card>-->
+                        <card-chooser card = "{{ cardtype }}" sample = "{{ sample }}" on-more-tap="{{ handleMore }}" on-clear-tap="{{ handleClear }}" on-delete-tap="{{ handleClear }}"></card-chooser>
                     </li>
                 </template>
             </ul>
         </div>
         <paper-dialog id = "more_dialog">
             <template bind="{{ samples.selected_sample as sample }}">
-                <style>
-                    paper-checkbox.blue::shadow #ink[checked] {
-                        color: #4285f4;
-                    }
-                    paper-checkbox.blue::shadow #checkbox.checked {
-                        border-color: #4285f4;
-                    }
-                </style>
-                <input-card uid="{{ sample.uid }}" selected="{{ sample.selected }}" description="{{ sample.description }}" full="true" on-clear-tap="{{ handleClear }}" on-delete-tap="{{ handleClear }}" on-more-tap="{{ handleMore }}"
-                                   class="card">
-
-                            <paper-input draggable="false" value="{{ sample.username }}" label="Sample Name"
-                                         class="sample"></paper-input>
-                            <core-label center horizontal layout style="width: 100px">
-                                <paper-checkbox flex class="blue" checked="{{ sample.subgrid }}" for></paper-checkbox>
-                            </core-label>
-
-                        </input-card>
+                <sample-scan-card full = "true" sample = "{{ sample }}" on-clear-tap="{{ handleClear }}" on-delete-tap="{{ handleDelete }}"></sample-scan-card>
             </template>
         </paper-dialog>
     </template>
 
     <script>
         Polymer({
+            publish: {
+                gridwidth: {
+                    value: 8,
+                    reflect: true
+                },
+                cardheight: {
+                    value: 140,
+                    reflect: true
+                },
+                cardtype: {
+                    value: 'plate40',
+                    reflect: true
+                }
+            },
             icon: "add",
             handleHoverAdd: function(event, detail, sender) {
                 var self = this;
@@ -144,8 +137,8 @@
                     }
                 }, 150);
 
-                this.$.addgrid.classList.add('sub_fab_show');
-                this.$.addone.classList.add('sub_fab_show');
+                this.$.add8x5grid.classList.add('sub_fab_show');
+                this.$.add96Well.classList.add('sub_fab_show');
                 this.$.fabadd.classList.add('fabadd_select');
 
             },
@@ -158,26 +151,34 @@
                     }
                 }, 50);
 
-                this.$.addgrid.classList.remove('sub_fab_show');
-                this.$.addone.classList.remove('sub_fab_show');
+                this.$.add8x5grid.classList.remove('sub_fab_show');
+                this.$.add96Well.classList.remove('sub_fab_show');
                 this.$.fabadd.classList.remove('fabadd_select');
 
 
             },
             handleClear: function (event, detail, sender) {
-                this.samples.remove_by_uid(sender.uid, event.type == 'clear-tap')
+                this.samples.remove_by_uid(sender.sample.uid, event.type == 'clear-tap')
 
             },
             handleMore: function (event, detail, sender) {
                 var d = this.$.more_dialog;
                 d.toggle();
                 console.log(this.samples.selected_sample);
-                this.samples.select_by_uid(sender.uid);
-                //this.$.service.setFavorite(post.uid, post.favorite)
+                this.samples.select_by_uid(sender.sample.uid);
+
             },
             handleAddCard: function (event, detail, sender){
-                if (sender.id == 'addgrid'){
-                    this.samples.new_grid();
+                if (sender.id == 'add8x5grid') {
+                    this.gridwidth = 8;
+                    this.cardheight = 140;
+                    this.cardtype = 'plate40';
+                    this.samples.new_grid(40);
+                } else if (sender.id == 'add96Well') {
+                    this.gridwidth = 12;
+                    this.cardheight = 200;
+                    this.cardtype = 'protein';
+                    this.samples.new_grid(96);
                 } else {
                     this.samples.add_sample();
                 }
@@ -224,10 +225,10 @@
                         self.samples.push({'uid': self.uid, 'selected': true, 'description': '', 'subgrid': false});
                         self.uid++;
                     };
-                    self.new_grid = function () {
+                    self.new_grid = function (number) {
                         self.uid = 0;
                         self.samples = [];
-                        for (var i = 0; i < 40; i++) {
+                        for (var i = 0; i < number; i++) {
                             self.add_sample()
                         }
                         self.selected_sample = self.samples[0]

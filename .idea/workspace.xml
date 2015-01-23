@@ -1,7 +1,445 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="SCOPE_TYPE" value="3" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="d088e2da-99bc-4fec-8d6e-3141006adca0" name="Default" comment="" />
+    <list default="true" id="d088e2da-99bc-4fec-8d6e-3141006adca0" name="Default" comment="Big changes. Before restructure.">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/8x5.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/96Well.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/test/resources/WebKitWeightWatcher100.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/test/resources/WebKitWeightWatcher200.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/test/resources/WebKitWeightWatcher300.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/test/resources/WebKitWeightWatcher400.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/test/resources/WebKitWeightWatcher500.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/test/resources/WebKitWeightWatcher600.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/test/resources/WebKitWeightWatcher700.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/test/resources/WebKitWeightWatcher800.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/test/resources/WebKitWeightWatcher900.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/test/blink/resources/blue-100.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/test/blink/resources/green-100.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/test/blink/resources/green-20.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/test/blink/resources/stripes-100.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/test/blink/resources/stripes-20.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/core-resizable/.bower.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/core-scroll-threshold/.bower.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/.bower.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/.travis-setup.sh" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/.travis.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/test/blink/2-keyframes-with-offsets.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/test/blink/3-keyframes-with-offsets.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/COPYING" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/Gruntfile.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/History.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/core-resizable/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/core-scroll-threshold/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/test/blink/add-keyframes.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/src/animation-constructor.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/test/js/animation-constructor.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/src/animation-node.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/test/js/animation-node.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/src/animation.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/src/apply-preserving-inline-style.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/test/js/apply-preserving-inline-style.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/src/apply.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/test/blink/interpolation/background-color-interpolation.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/test/blink/interpolation/background-image-interpolation.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/test/blink/interpolation/background-position-interpolation.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/test/blink/interpolation/background-position-origin-interpolation.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/test/blink/interpolation/background-size-interpolation.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/core-resizable/test/basic.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/paper-dialog/test/basic.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/templates/boilerplate" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/test/blink/interpolation/border-color-interpolation.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/test/blink/interpolation/border-image-outset-interpolation.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/test/blink/interpolation/border-image-slice-interpolation.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/test/blink/interpolation/border-image-source-interpolation.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/test/blink/interpolation/border-image-width-interpolation.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/test/blink/interpolation/border-radius-interpolation.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/test/blink/interpolation/border-spacing-interpolation.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/test/blink/interpolation/border-width-interpolation.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/test/blink/interpolation/bottom-interpolation.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/core-resizable/bower.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/core-scroll-threshold/bower.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/src/box-handler.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/test/js/box-handler.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/test/blink/interpolation/box-shadow-interpolation.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/test/blink/interpolation/calc-interpolation.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/card-chooser.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/client.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/test/blink/interpolation/clip-interpolation.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/src/color-handler.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/test/js/color-handler.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/test/blink/interpolation/color-interpolation.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/core-overlay/tests/html/core-overlay-quick-close.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/core-resizable/core-resizable.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/core-scroll-threshold/core-scroll-threshold.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/core-list/demos/demo-pages.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/core-list/demos/demo-resize.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/core-list/demos/demo-splitter.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/core-scroll-threshold/demo.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/src/dev.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/src/dimension-handler.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/test/js/dimension-handler.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/test/blink/eased-keyframes.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/src/effect-callback.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/test/js/effect-callback.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/src/effect.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/test/js/effect.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/src/element-animatable.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/test/blink/interpolation/filter-interpolation.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/test/blink/interpolation/flex-interpolation.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/test/blink/interpolation/font-size-interpolation.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/src/font-weight-handler.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/test/blink/interpolation/font-weight-interpolation.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/test/blink/get-animation-players.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/test/blink/get-css-players.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/src/group-constructors.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/test/js/group-constructors.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/test/js/group-player-finish-event.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/test/js/group-player.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/src/handler-utils.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/test/blink/interpolation/height-interpolation.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/core-resizable/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/core-resizable/test/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/core-scroll-threshold/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/test/blink/insufficient-keyframes.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/test/blink/interpolation/resources/interpolation-test.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/src/interpolation.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/test/js/interpolation.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/test/karma-config-ci.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/test/karma-config.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/test/blink/keyframe-properties.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/test/blink/resources/keyframes-test.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/test/blink/keyframes-with-null-offsets.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/test/blink/interpolation/left-interpolation.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/test/blink/interpolation/letter-spacing-interpolation.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/test/blink/interpolation/line-height-interpolation.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/test/blink/interpolation/list-style-image-interpolation.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/test/blink/interpolation/margin-interpolation.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/src/matrix-decomposition.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/src/matrix-interpolation.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/test/js/matrix-interpolation.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/test/blink/interpolation/max-height-interpolation.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/test/blink/interpolation/max-width-interpolation.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/src/maxifill-player.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/core-scroll-threshold/metadata.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/test/blink/interpolation/min-height-interpolation.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/test/blink/interpolation/min-width-interpolation.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/src/normalize-keyframes.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/src/number-handler.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/test/js/number-handler.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/test/blink/interpolation/object-position-interpolation.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/test/blink/interpolation/opacity-interpolation.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/test/blink/interpolation/orphans-interpolation.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/test/blink/out-of-order-keyframes.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/test/blink/interpolation/outline-color-interpolation.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/test/blink/interpolation/outline-offset-interpolation.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/test/blink/interpolation/outline-width-interpolation.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/webcomponentsjs/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/test/blink/interpolation/padding-interpolation.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/test/blink/interpolation/perspective-interpolation.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/test/blink/interpolation/perspective-origin-interpolation.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plates_socket.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/test/js/player-finish-event.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/src/player.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/test/js/player.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/src/position-handler.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/src/property-interpolation.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/test/js/property-interpolation.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/src/property-names.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/protein-card.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/test/blink/interpolation/right-interpolation.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/test/runner-web-animations-next-lite.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/test/runner-web-animations-next.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/test/runner-web-animations.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/templates/runner.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/test/runner.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/test/blink/same-offset-keyframes.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/src/scope.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/src/shadow-handler.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/src/shape-handler.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/test/blink/interpolation/shape-image-threshold.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/test/blink/interpolation/shape-margin.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/test/blink/interpolation/shape-outside.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/test/blink/simple-keyframes.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/socket_test.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/target-config.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/target-loader.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/core-resizable/test/test-elements.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/test/testharness-runner.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/test/testharness-runner.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/test/testharness-tests.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/test/blink/testharness/testharness.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/test/blink/testharness/testharness.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/test/blink/testharness/testharnessreport.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/test/blink/interpolation/text-decoration-color-interpolation.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/test/blink/interpolation/text-indent-interpolation.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/test/blink/interpolation/text-shadow-interpolation.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/src/tick.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/test/js/tick.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/src/timeline.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/test/js/timeline.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/src/timing-utilities.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/test/js/timing.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/test/blink/interpolation/top-interpolation.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/src/transform-handler.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/test/js/transform-handler.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/test/blink/interpolation/transform-matrix-interpolation.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/test/blink/interpolation/transform-none-interpolation.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/test/blink/interpolation/transform-origin-interpolation.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/test/blink/interpolation/transform-perspective-interpolation.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/test/blink/interpolation/transform-rotate-interpolation.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/test/blink/interpolation/transform-scale-interpolation.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/test/blink/interpolation/transform-skew-interpolation.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/test/blink/interpolation/transform-translate-interpolation.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/test/blink/interpolation/vertical-align-interpolation.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/test/blink/interpolation/viewport-unit-interpolation.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/src/visibility-handler.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/test/blink/interpolation/visibility-interpolation.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/web-animations-next-lite.dev.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/web-animations-next-lite.dev.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/web-animations-next.dev.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/web-animations-next.dev.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/web-animations.dev.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/web-animations.dev.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/web-animations.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/templates/web-animations.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/templates/web-animations.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/test/blink/interpolation/widows-interpolation.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/test/blink/interpolation/width-interpolation.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/test/blink/interpolation/word-spacing-interpolation.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/test/blink/interpolation/z-index-interpolation.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bower_components/web-animations-js/test/blink/interpolation/zoom-iterpolation.html" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/bower_components/core-dropdown/metadata.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/bower_components/paper-input/test/states.html" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/context-free-parser/.bower.json" afterPath="$PROJECT_DIR$/static/bower_components/context-free-parser/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/core-a11y-keys/.bower.json" afterPath="$PROJECT_DIR$/static/bower_components/core-a11y-keys/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/core-ajax/.bower.json" afterPath="$PROJECT_DIR$/static/bower_components/core-ajax/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/core-animated-pages/.bower.json" afterPath="$PROJECT_DIR$/static/bower_components/core-animated-pages/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/core-animation/.bower.json" afterPath="$PROJECT_DIR$/static/bower_components/core-animation/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/core-collapse/.bower.json" afterPath="$PROJECT_DIR$/static/bower_components/core-collapse/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/core-component-page/.bower.json" afterPath="$PROJECT_DIR$/static/bower_components/core-component-page/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/core-doc-viewer/.bower.json" afterPath="$PROJECT_DIR$/static/bower_components/core-doc-viewer/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/core-docs/.bower.json" afterPath="$PROJECT_DIR$/static/bower_components/core-docs/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/core-drag-drop/.bower.json" afterPath="$PROJECT_DIR$/static/bower_components/core-drag-drop/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/core-drawer-panel/.bower.json" afterPath="$PROJECT_DIR$/static/bower_components/core-drawer-panel/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/core-dropdown/.bower.json" afterPath="$PROJECT_DIR$/static/bower_components/core-dropdown/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/core-dropdown-menu/.bower.json" afterPath="$PROJECT_DIR$/static/bower_components/core-dropdown-menu/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/core-elements/.bower.json" afterPath="$PROJECT_DIR$/static/bower_components/core-elements/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/core-focusable/.bower.json" afterPath="$PROJECT_DIR$/static/bower_components/core-focusable/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/core-header-panel/.bower.json" afterPath="$PROJECT_DIR$/static/bower_components/core-header-panel/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/core-icon/.bower.json" afterPath="$PROJECT_DIR$/static/bower_components/core-icon/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/core-icon-button/.bower.json" afterPath="$PROJECT_DIR$/static/bower_components/core-icon-button/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/core-icons/.bower.json" afterPath="$PROJECT_DIR$/static/bower_components/core-icons/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/core-iconset/.bower.json" afterPath="$PROJECT_DIR$/static/bower_components/core-iconset/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/core-iconset-svg/.bower.json" afterPath="$PROJECT_DIR$/static/bower_components/core-iconset-svg/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/core-image/.bower.json" afterPath="$PROJECT_DIR$/static/bower_components/core-image/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/core-input/.bower.json" afterPath="$PROJECT_DIR$/static/bower_components/core-input/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/core-item/.bower.json" afterPath="$PROJECT_DIR$/static/bower_components/core-item/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/core-label/.bower.json" afterPath="$PROJECT_DIR$/static/bower_components/core-label/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/core-layout-grid/.bower.json" afterPath="$PROJECT_DIR$/static/bower_components/core-layout-grid/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/core-layout-trbl/.bower.json" afterPath="$PROJECT_DIR$/static/bower_components/core-layout-trbl/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/core-list/.bower.json" afterPath="$PROJECT_DIR$/static/bower_components/core-list/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/core-localstorage/.bower.json" afterPath="$PROJECT_DIR$/static/bower_components/core-localstorage/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/core-media-query/.bower.json" afterPath="$PROJECT_DIR$/static/bower_components/core-media-query/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/core-menu/.bower.json" afterPath="$PROJECT_DIR$/static/bower_components/core-menu/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/core-menu-button/.bower.json" afterPath="$PROJECT_DIR$/static/bower_components/core-menu-button/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/core-meta/.bower.json" afterPath="$PROJECT_DIR$/static/bower_components/core-meta/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/core-overlay/.bower.json" afterPath="$PROJECT_DIR$/static/bower_components/core-overlay/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/core-pages/.bower.json" afterPath="$PROJECT_DIR$/static/bower_components/core-pages/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/core-range/.bower.json" afterPath="$PROJECT_DIR$/static/bower_components/core-range/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/core-scaffold/.bower.json" afterPath="$PROJECT_DIR$/static/bower_components/core-scaffold/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/core-scroll-header-panel/.bower.json" afterPath="$PROJECT_DIR$/static/bower_components/core-scroll-header-panel/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/core-selection/.bower.json" afterPath="$PROJECT_DIR$/static/bower_components/core-selection/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/core-selector/.bower.json" afterPath="$PROJECT_DIR$/static/bower_components/core-selector/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/core-shared-lib/.bower.json" afterPath="$PROJECT_DIR$/static/bower_components/core-shared-lib/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/core-signals/.bower.json" afterPath="$PROJECT_DIR$/static/bower_components/core-signals/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/core-splitter/.bower.json" afterPath="$PROJECT_DIR$/static/bower_components/core-splitter/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/core-style/.bower.json" afterPath="$PROJECT_DIR$/static/bower_components/core-style/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/core-tests/.bower.json" afterPath="$PROJECT_DIR$/static/bower_components/core-tests/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/core-toolbar/.bower.json" afterPath="$PROJECT_DIR$/static/bower_components/core-toolbar/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/core-tooltip/.bower.json" afterPath="$PROJECT_DIR$/static/bower_components/core-tooltip/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/core-transition/.bower.json" afterPath="$PROJECT_DIR$/static/bower_components/core-transition/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/font-roboto/.bower.json" afterPath="$PROJECT_DIR$/static/bower_components/font-roboto/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/marked-element/.bower.json" afterPath="$PROJECT_DIR$/static/bower_components/marked-element/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/paper-button/.bower.json" afterPath="$PROJECT_DIR$/static/bower_components/paper-button/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/paper-checkbox/.bower.json" afterPath="$PROJECT_DIR$/static/bower_components/paper-checkbox/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/paper-dialog/.bower.json" afterPath="$PROJECT_DIR$/static/bower_components/paper-dialog/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/paper-dropdown/.bower.json" afterPath="$PROJECT_DIR$/static/bower_components/paper-dropdown/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/paper-dropdown-menu/.bower.json" afterPath="$PROJECT_DIR$/static/bower_components/paper-dropdown-menu/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/paper-elements/.bower.json" afterPath="$PROJECT_DIR$/static/bower_components/paper-elements/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/paper-fab/.bower.json" afterPath="$PROJECT_DIR$/static/bower_components/paper-fab/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/paper-icon-button/.bower.json" afterPath="$PROJECT_DIR$/static/bower_components/paper-icon-button/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/paper-input/.bower.json" afterPath="$PROJECT_DIR$/static/bower_components/paper-input/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/paper-item/.bower.json" afterPath="$PROJECT_DIR$/static/bower_components/paper-item/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/paper-menu-button/.bower.json" afterPath="$PROJECT_DIR$/static/bower_components/paper-menu-button/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/paper-progress/.bower.json" afterPath="$PROJECT_DIR$/static/bower_components/paper-progress/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/paper-radio-button/.bower.json" afterPath="$PROJECT_DIR$/static/bower_components/paper-radio-button/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/paper-radio-group/.bower.json" afterPath="$PROJECT_DIR$/static/bower_components/paper-radio-group/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/paper-ripple/.bower.json" afterPath="$PROJECT_DIR$/static/bower_components/paper-ripple/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/paper-shadow/.bower.json" afterPath="$PROJECT_DIR$/static/bower_components/paper-shadow/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/paper-slider/.bower.json" afterPath="$PROJECT_DIR$/static/bower_components/paper-slider/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/paper-spinner/.bower.json" afterPath="$PROJECT_DIR$/static/bower_components/paper-spinner/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/paper-tabs/.bower.json" afterPath="$PROJECT_DIR$/static/bower_components/paper-tabs/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/paper-toast/.bower.json" afterPath="$PROJECT_DIR$/static/bower_components/paper-toast/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/paper-toggle-button/.bower.json" afterPath="$PROJECT_DIR$/static/bower_components/paper-toggle-button/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/polymer/.bower.json" afterPath="$PROJECT_DIR$/static/bower_components/polymer/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/polymer-test-tools/.bower.json" afterPath="$PROJECT_DIR$/static/bower_components/polymer-test-tools/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/prettify-element/.bower.json" afterPath="$PROJECT_DIR$/static/bower_components/prettify-element/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/sampler-scaffold/.bower.json" afterPath="$PROJECT_DIR$/static/bower_components/sampler-scaffold/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/webcomponentsjs/.bower.json" afterPath="$PROJECT_DIR$/static/bower_components/webcomponentsjs/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/webcomponentsjs/CustomElements.js" afterPath="$PROJECT_DIR$/static/bower_components/webcomponentsjs/CustomElements.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/webcomponentsjs/CustomElements.min.js" afterPath="$PROJECT_DIR$/static/bower_components/webcomponentsjs/CustomElements.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/webcomponentsjs/HTMLImports.js" afterPath="$PROJECT_DIR$/static/bower_components/webcomponentsjs/HTMLImports.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/webcomponentsjs/HTMLImports.min.js" afterPath="$PROJECT_DIR$/static/bower_components/webcomponentsjs/HTMLImports.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/polymer/README.md" afterPath="$PROJECT_DIR$/static/bower_components/polymer/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/webcomponentsjs/README.md" afterPath="$PROJECT_DIR$/static/bower_components/webcomponentsjs/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/webcomponentsjs/ShadowDOM.js" afterPath="$PROJECT_DIR$/static/bower_components/webcomponentsjs/ShadowDOM.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/webcomponentsjs/ShadowDOM.min.js" afterPath="$PROJECT_DIR$/static/bower_components/webcomponentsjs/ShadowDOM.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/paper-input/test/autogrow.html" afterPath="$PROJECT_DIR$/static/bower_components/paper-input/test/autogrow.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/core-selector/test/basic.html" afterPath="$PROJECT_DIR$/static/bower_components/core-selector/test/basic.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/context-free-parser/bower.json" afterPath="$PROJECT_DIR$/static/bower_components/context-free-parser/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/core-a11y-keys/bower.json" afterPath="$PROJECT_DIR$/static/bower_components/core-a11y-keys/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/core-ajax/bower.json" afterPath="$PROJECT_DIR$/static/bower_components/core-ajax/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/core-animated-pages/bower.json" afterPath="$PROJECT_DIR$/static/bower_components/core-animated-pages/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/core-animation/bower.json" afterPath="$PROJECT_DIR$/static/bower_components/core-animation/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/core-collapse/bower.json" afterPath="$PROJECT_DIR$/static/bower_components/core-collapse/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/core-component-page/bower.json" afterPath="$PROJECT_DIR$/static/bower_components/core-component-page/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/core-doc-viewer/bower.json" afterPath="$PROJECT_DIR$/static/bower_components/core-doc-viewer/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/core-docs/bower.json" afterPath="$PROJECT_DIR$/static/bower_components/core-docs/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/core-drawer-panel/bower.json" afterPath="$PROJECT_DIR$/static/bower_components/core-drawer-panel/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/core-dropdown/bower.json" afterPath="$PROJECT_DIR$/static/bower_components/core-dropdown/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/core-dropdown-menu/bower.json" afterPath="$PROJECT_DIR$/static/bower_components/core-dropdown-menu/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/core-elements/bower.json" afterPath="$PROJECT_DIR$/static/bower_components/core-elements/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/core-focusable/bower.json" afterPath="$PROJECT_DIR$/static/bower_components/core-focusable/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/core-header-panel/bower.json" afterPath="$PROJECT_DIR$/static/bower_components/core-header-panel/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/core-icon/bower.json" afterPath="$PROJECT_DIR$/static/bower_components/core-icon/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/core-icon-button/bower.json" afterPath="$PROJECT_DIR$/static/bower_components/core-icon-button/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/core-icons/bower.json" afterPath="$PROJECT_DIR$/static/bower_components/core-icons/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/core-iconset/bower.json" afterPath="$PROJECT_DIR$/static/bower_components/core-iconset/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/core-iconset-svg/bower.json" afterPath="$PROJECT_DIR$/static/bower_components/core-iconset-svg/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/core-image/bower.json" afterPath="$PROJECT_DIR$/static/bower_components/core-image/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/core-input/bower.json" afterPath="$PROJECT_DIR$/static/bower_components/core-input/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/core-item/bower.json" afterPath="$PROJECT_DIR$/static/bower_components/core-item/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/core-label/bower.json" afterPath="$PROJECT_DIR$/static/bower_components/core-label/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/core-layout-grid/bower.json" afterPath="$PROJECT_DIR$/static/bower_components/core-layout-grid/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/core-layout-trbl/bower.json" afterPath="$PROJECT_DIR$/static/bower_components/core-layout-trbl/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/core-list/bower.json" afterPath="$PROJECT_DIR$/static/bower_components/core-list/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/core-localstorage/bower.json" afterPath="$PROJECT_DIR$/static/bower_components/core-localstorage/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/core-media-query/bower.json" afterPath="$PROJECT_DIR$/static/bower_components/core-media-query/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/core-menu/bower.json" afterPath="$PROJECT_DIR$/static/bower_components/core-menu/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/core-menu-button/bower.json" afterPath="$PROJECT_DIR$/static/bower_components/core-menu-button/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/core-meta/bower.json" afterPath="$PROJECT_DIR$/static/bower_components/core-meta/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/core-overlay/bower.json" afterPath="$PROJECT_DIR$/static/bower_components/core-overlay/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/core-pages/bower.json" afterPath="$PROJECT_DIR$/static/bower_components/core-pages/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/core-range/bower.json" afterPath="$PROJECT_DIR$/static/bower_components/core-range/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/core-scaffold/bower.json" afterPath="$PROJECT_DIR$/static/bower_components/core-scaffold/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/core-scroll-header-panel/bower.json" afterPath="$PROJECT_DIR$/static/bower_components/core-scroll-header-panel/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/core-selection/bower.json" afterPath="$PROJECT_DIR$/static/bower_components/core-selection/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/core-selector/bower.json" afterPath="$PROJECT_DIR$/static/bower_components/core-selector/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/core-shared-lib/bower.json" afterPath="$PROJECT_DIR$/static/bower_components/core-shared-lib/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/core-signals/bower.json" afterPath="$PROJECT_DIR$/static/bower_components/core-signals/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/core-splitter/bower.json" afterPath="$PROJECT_DIR$/static/bower_components/core-splitter/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/core-style/bower.json" afterPath="$PROJECT_DIR$/static/bower_components/core-style/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/core-tests/bower.json" afterPath="$PROJECT_DIR$/static/bower_components/core-tests/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/core-toolbar/bower.json" afterPath="$PROJECT_DIR$/static/bower_components/core-toolbar/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/core-tooltip/bower.json" afterPath="$PROJECT_DIR$/static/bower_components/core-tooltip/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/core-transition/bower.json" afterPath="$PROJECT_DIR$/static/bower_components/core-transition/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/marked-element/bower.json" afterPath="$PROJECT_DIR$/static/bower_components/marked-element/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/paper-button/bower.json" afterPath="$PROJECT_DIR$/static/bower_components/paper-button/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/paper-checkbox/bower.json" afterPath="$PROJECT_DIR$/static/bower_components/paper-checkbox/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/paper-dialog/bower.json" afterPath="$PROJECT_DIR$/static/bower_components/paper-dialog/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/paper-dropdown/bower.json" afterPath="$PROJECT_DIR$/static/bower_components/paper-dropdown/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/paper-dropdown-menu/bower.json" afterPath="$PROJECT_DIR$/static/bower_components/paper-dropdown-menu/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/paper-elements/bower.json" afterPath="$PROJECT_DIR$/static/bower_components/paper-elements/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/paper-fab/bower.json" afterPath="$PROJECT_DIR$/static/bower_components/paper-fab/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/paper-icon-button/bower.json" afterPath="$PROJECT_DIR$/static/bower_components/paper-icon-button/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/paper-input/bower.json" afterPath="$PROJECT_DIR$/static/bower_components/paper-input/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/paper-item/bower.json" afterPath="$PROJECT_DIR$/static/bower_components/paper-item/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/paper-menu-button/bower.json" afterPath="$PROJECT_DIR$/static/bower_components/paper-menu-button/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/paper-progress/bower.json" afterPath="$PROJECT_DIR$/static/bower_components/paper-progress/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/paper-radio-button/bower.json" afterPath="$PROJECT_DIR$/static/bower_components/paper-radio-button/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/paper-radio-group/bower.json" afterPath="$PROJECT_DIR$/static/bower_components/paper-radio-group/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/paper-ripple/bower.json" afterPath="$PROJECT_DIR$/static/bower_components/paper-ripple/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/paper-shadow/bower.json" afterPath="$PROJECT_DIR$/static/bower_components/paper-shadow/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/paper-slider/bower.json" afterPath="$PROJECT_DIR$/static/bower_components/paper-slider/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/paper-spinner/bower.json" afterPath="$PROJECT_DIR$/static/bower_components/paper-spinner/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/paper-tabs/bower.json" afterPath="$PROJECT_DIR$/static/bower_components/paper-tabs/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/paper-toast/bower.json" afterPath="$PROJECT_DIR$/static/bower_components/paper-toast/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/paper-toggle-button/bower.json" afterPath="$PROJECT_DIR$/static/bower_components/paper-toggle-button/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/polymer/bower.json" afterPath="$PROJECT_DIR$/static/bower_components/polymer/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/polymer-test-tools/bower.json" afterPath="$PROJECT_DIR$/static/bower_components/polymer-test-tools/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/prettify-element/bower.json" afterPath="$PROJECT_DIR$/static/bower_components/prettify-element/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/sampler-scaffold/bower.json" afterPath="$PROJECT_DIR$/static/bower_components/sampler-scaffold/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/webcomponentsjs/bower.json" afterPath="$PROJECT_DIR$/static/bower_components/webcomponentsjs/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/card-grid.html" afterPath="$PROJECT_DIR$/static/card-grid.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/core-a11y-keys/core-a11y-keys.html" afterPath="$PROJECT_DIR$/static/bower_components/core-a11y-keys/core-a11y-keys.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/core-ajax/core-ajax.html" afterPath="$PROJECT_DIR$/static/bower_components/core-ajax/core-ajax.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/core-animated-pages/core-animated-pages.html" afterPath="$PROJECT_DIR$/static/bower_components/core-animated-pages/core-animated-pages.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/core-drawer-panel/core-drawer-panel.css" afterPath="$PROJECT_DIR$/static/bower_components/core-drawer-panel/core-drawer-panel.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/core-drawer-panel/core-drawer-panel.html" afterPath="$PROJECT_DIR$/static/bower_components/core-drawer-panel/core-drawer-panel.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/core-dropdown/core-dropdown.html" afterPath="$PROJECT_DIR$/static/bower_components/core-dropdown/core-dropdown.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/core-elements/core-elements.html" afterPath="$PROJECT_DIR$/static/bower_components/core-elements/core-elements.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/core-icons/core-icons.html" afterPath="$PROJECT_DIR$/static/bower_components/core-icons/core-icons.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/core-list/core-list.html" afterPath="$PROJECT_DIR$/static/bower_components/core-list/core-list.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/core-localstorage/core-localstorage.html" afterPath="$PROJECT_DIR$/static/bower_components/core-localstorage/core-localstorage.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/core-overlay/core-overlay.html" afterPath="$PROJECT_DIR$/static/bower_components/core-overlay/core-overlay.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/core-scroll-header-panel/core-scroll-header-panel.html" afterPath="$PROJECT_DIR$/static/bower_components/core-scroll-header-panel/core-scroll-header-panel.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/core-selection/core-selection.html" afterPath="$PROJECT_DIR$/static/bower_components/core-selection/core-selection.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/core-splitter/core-splitter.html" afterPath="$PROJECT_DIR$/static/bower_components/core-splitter/core-splitter.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/core-menu/core-submenu.html" afterPath="$PROJECT_DIR$/static/bower_components/core-menu/core-submenu.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/core-toolbar/core-toolbar.html" afterPath="$PROJECT_DIR$/static/bower_components/core-toolbar/core-toolbar.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/core-tooltip/core-tooltip.html" afterPath="$PROJECT_DIR$/static/bower_components/core-tooltip/core-tooltip.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/paper-input/test/decorator.html" afterPath="$PROJECT_DIR$/static/bower_components/paper-input/test/decorator.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/core-list/demos/demo-data-grouped-short.json" afterPath="$PROJECT_DIR$/static/bower_components/core-list/demos/demo-data-grouped-short.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/core-list/demos/demo-flickr-responsive.html" afterPath="$PROJECT_DIR$/static/bower_components/core-list/demos/demo-flickr-responsive.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/core-list/demos/demo-messages.html" afterPath="$PROJECT_DIR$/static/bower_components/core-list/demos/demo-messages.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/core-list/demo.html" afterPath="$PROJECT_DIR$/static/bower_components/core-list/demo.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/paper-dialog/demo.html" afterPath="$PROJECT_DIR$/static/bower_components/paper-dialog/demo.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/paper-dropdown-menu/demo.html" afterPath="$PROJECT_DIR$/static/bower_components/paper-dropdown-menu/demo.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/paper-icon-button/demo.html" afterPath="$PROJECT_DIR$/static/bower_components/paper-icon-button/demo.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/paper-input/demo.html" afterPath="$PROJECT_DIR$/static/bower_components/paper-input/demo.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/paper-spinner/demo.html" afterPath="$PROJECT_DIR$/static/bower_components/paper-spinner/demo.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/core-overlay/tests/js/htmltests.js" afterPath="$PROJECT_DIR$/static/bower_components/core-overlay/tests/js/htmltests.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/core-component-page/index.html" afterPath="$PROJECT_DIR$/static/bower_components/core-component-page/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/paper-input/index.html" afterPath="$PROJECT_DIR$/static/bower_components/paper-input/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/index.html" afterPath="$PROJECT_DIR$/templates/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/input-card.html" afterPath="$PROJECT_DIR$/static/input-card.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/core-selector/test/next-previous.html" afterPath="$PROJECT_DIR$/static/bower_components/core-selector/test/next-previous.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/paper-dialog/paper-action-dialog.html" afterPath="$PROJECT_DIR$/static/bower_components/paper-dialog/paper-action-dialog.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/paper-input/paper-autogrow-textarea.html" afterPath="$PROJECT_DIR$/static/bower_components/paper-input/paper-autogrow-textarea.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/paper-button/paper-button-base.html" afterPath="$PROJECT_DIR$/static/bower_components/paper-button/paper-button-base.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/paper-button/paper-button.html" afterPath="$PROJECT_DIR$/static/bower_components/paper-button/paper-button.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/paper-dialog/paper-dialog.html" afterPath="$PROJECT_DIR$/static/bower_components/paper-dialog/paper-dialog.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/paper-elements/paper-elements.html" afterPath="$PROJECT_DIR$/static/bower_components/paper-elements/paper-elements.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/paper-fab/paper-fab.html" afterPath="$PROJECT_DIR$/static/bower_components/paper-fab/paper-fab.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/paper-input/paper-input-decorator.css" afterPath="$PROJECT_DIR$/static/bower_components/paper-input/paper-input-decorator.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/paper-input/paper-input-decorator.html" afterPath="$PROJECT_DIR$/static/bower_components/paper-input/paper-input-decorator.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/paper-input/paper-input.html" afterPath="$PROJECT_DIR$/static/bower_components/paper-input/paper-input.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/paper-item/paper-item.html" afterPath="$PROJECT_DIR$/static/bower_components/paper-item/paper-item.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/paper-radio-button/paper-radio-button.html" afterPath="$PROJECT_DIR$/static/bower_components/paper-radio-button/paper-radio-button.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/paper-ripple/paper-ripple.html" afterPath="$PROJECT_DIR$/static/bower_components/paper-ripple/paper-ripple.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/paper-shadow/paper-shadow.html" afterPath="$PROJECT_DIR$/static/bower_components/paper-shadow/paper-shadow.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/paper-slider/paper-slider.html" afterPath="$PROJECT_DIR$/static/bower_components/paper-slider/paper-slider.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/paper-spinner/paper-spinner.css" afterPath="$PROJECT_DIR$/static/bower_components/paper-spinner/paper-spinner.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/paper-spinner/paper-spinner.html" afterPath="$PROJECT_DIR$/static/bower_components/paper-spinner/paper-spinner.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/paper-tabs/paper-tabs.html" afterPath="$PROJECT_DIR$/static/bower_components/paper-tabs/paper-tabs.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plates.py" afterPath="$PROJECT_DIR$/plates.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/polymer/polymer.js" afterPath="$PROJECT_DIR$/static/bower_components/polymer/polymer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/polymer/polymer.min.js" afterPath="$PROJECT_DIR$/static/bower_components/polymer/polymer.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/sample-scan-card.html" afterPath="$PROJECT_DIR$/static/sample-scan-card.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/core-animation/web-animations.html" afterPath="$PROJECT_DIR$/static/bower_components/core-animation/web-animations.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/webcomponentsjs/webcomponents-lite.js" afterPath="$PROJECT_DIR$/static/bower_components/webcomponentsjs/webcomponents-lite.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/webcomponentsjs/webcomponents-lite.min.js" afterPath="$PROJECT_DIR$/static/bower_components/webcomponentsjs/webcomponents-lite.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/webcomponentsjs/webcomponents.js" afterPath="$PROJECT_DIR$/static/bower_components/webcomponentsjs/webcomponents.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/webcomponentsjs/webcomponents.min.js" afterPath="$PROJECT_DIR$/static/bower_components/webcomponentsjs/webcomponents.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="plates.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -14,7 +452,9 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/plates$plates.coverage" NAME="plates Coverage Results" MODIFIED="1417743795425" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/plates$Unnamed.coverage" NAME="Unnamed Coverage Results" MODIFIED="1417758765569" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/plates$plates.coverage" NAME="plates Coverage Results" MODIFIED="1421902201268" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/plates$plates_socket.coverage" NAME="plates_socket Coverage Results" MODIFIED="1421905814823" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -28,12 +468,34 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file leaf-file-name="scan_saxs.py" pinned="false" current-in-tab="false">
+        <entry file="file:///beamline/perforce/Dev/SBS/3_Beamlines/3_04_SR13ID01_SWAXS/3_04_4_Equipment_Control/sw/Python/saxslibrarydev/devices/scan_saxs.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="2150" max-vertical-offset="3960">
+              <caret line="72" column="35" selection-start-line="72" selection-start-column="35" selection-end-line="72" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="plates.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/plates.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="324">
-              <caret line="7" column="39" selection-start-line="7" selection-start-column="39" selection-end-line="7" selection-end-column="39" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="144" max-vertical-offset="396">
+              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="plates_socket.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/plates_socket.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="810" max-vertical-offset="2052">
+              <caret line="62" column="53" selection-start-line="62" selection-start-column="53" selection-end-line="62" selection-end-column="53" />
+              <folding>
+                <element signature="e#0#86#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -41,28 +503,28 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.0" vertical-offset="1084" max-vertical-offset="2034">
-              <caret line="72" column="54" selection-start-line="72" selection-start-column="52" selection-end-line="72" selection-end-column="54" />
+            <state vertical-scroll-proportion="0.6666667" vertical-offset="2268" max-vertical-offset="5364">
+              <caret line="125" column="114" selection-start-line="125" selection-start-column="114" selection-end-line="125" selection-end-column="114" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="card-grid.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="protocol.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/env/lib/python2.7/site-packages/autobahn/websocket/protocol.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="23647" max-vertical-offset="82044">
+              <caret line="1327" column="0" selection-start-line="1327" selection-start-column="0" selection-end-line="1327" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="card-grid.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/static/card-grid.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.075472" vertical-offset="1268" max-vertical-offset="4932">
-              <caret line="106" column="25" selection-start-line="86" selection-start-column="20" selection-end-line="106" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="input-card.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/static/input-card.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.14622056" vertical-offset="1412" max-vertical-offset="3042">
-              <caret line="85" column="25" selection-start-line="85" selection-start-column="25" selection-end-line="85" selection-end-column="25" />
+            <state vertical-scroll-proportion="0.4483188" vertical-offset="2322" max-vertical-offset="4950">
+              <caret line="149" column="42" selection-start-line="149" selection-start-column="42" selection-end-line="149" selection-end-column="42" />
               <folding />
             </state>
           </provider>
@@ -71,8 +533,38 @@
       <file leaf-file-name="sample-scan-card.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/static/sample-scan-card.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="108">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="108" max-vertical-offset="594">
+              <caret line="6" column="14" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="card-chooser.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/card-chooser.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-4.6666665" vertical-offset="0" max-vertical-offset="450">
+              <caret line="7" column="48" selection-start-line="7" selection-start-column="48" selection-end-line="7" selection-end-column="48" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="protein-card.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/protein-card.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-4.6666665" vertical-offset="270" max-vertical-offset="2772">
+              <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="input-card.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/input-card.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="1083" max-vertical-offset="2952">
+              <caret line="27" column="20" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -84,11 +576,18 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/static/card-grid.py" />
+        <option value="$PROJECT_DIR$/socket_test.py" />
+        <option value="$PROJECT_DIR$/saxs_socket_server.py" />
         <option value="$PROJECT_DIR$/plates.py" />
-        <option value="$PROJECT_DIR$/templates/index.html" />
-        <option value="$PROJECT_DIR$/static/card-grid.html" />
+        <option value="$PROJECT_DIR$/templates/client.html" />
+        <option value="/beamline/perforce/Dev/SBS/3_Beamlines/3_04_SR13ID01_SWAXS/3_04_4_Equipment_Control/sw/Python/saxslibrarydev/devices/scan_saxs.py" />
         <option value="$PROJECT_DIR$/static/sample-scan-card.html" />
         <option value="$PROJECT_DIR$/static/input-card.html" />
+        <option value="$PROJECT_DIR$/templates/index.html" />
+        <option value="$PROJECT_DIR$/static/card-grid.html" />
+        <option value="$PROJECT_DIR$/static/card-chooser.html" />
+        <option value="$PROJECT_DIR$/plates_socket.py" />
+        <option value="$PROJECT_DIR$/static/protein-card.html" />
       </list>
     </option>
   </component>
@@ -97,10 +596,10 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="1280" />
-    <option name="width" value="960" />
+    <option name="width" value="1920" />
     <option name="height" value="1181" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
     <OptionsSetting value="true" id="Remove" />
     <OptionsSetting value="true" id="Checkout" />
@@ -131,10 +630,6 @@
               <option name="myItemId" value="plates" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -143,20 +638,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="plates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="plates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="plates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -184,9 +665,10 @@
     <property name="options.lastSelected" value="preferences.lookFeel" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="/beamline/perforce/Dev/SBS/3_Beamlines/3_04_SR13ID01_SWAXS/3_04_4_Equipment_Control/sw/Python/saxslibrarydev/beamline/config_SAXS.py" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
     <property name="LayoutCode.rearrangeEntriesJinja2" value="false" />
+    <property name="restartRequiresConfirmation" value="true" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -194,6 +676,9 @@
     </option>
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/static" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/static" />
     </key>
@@ -382,6 +867,7 @@
       <node-options />
       <gulpfile />
       <tasks />
+      <arguments />
       <pass-parent-envs>true</pass-parent-envs>
       <envs />
       <method />
@@ -392,7 +878,7 @@
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="" />
+      <option name="SDK_HOME" value="$PROJECT_DIR$/env/bin/python" />
       <option name="WORKING_DIRECTORY" value="" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -402,12 +888,58 @@
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/plates.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
+      <RunnerSettings RunnerId="PyDebugRunner" />
+      <RunnerSettings RunnerId="PythonRunner" />
+      <ConfigurationWrapper RunnerId="PyDebugRunner" />
+      <ConfigurationWrapper RunnerId="PythonRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="plates_socket" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="$PROJECT_DIR$/env/bin/python" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="plates" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/plates_socket.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <RunnerSettings RunnerId="PyDebugRunner" />
+      <RunnerSettings RunnerId="PythonRunner" />
+      <ConfigurationWrapper RunnerId="PyDebugRunner" />
+      <ConfigurationWrapper RunnerId="PythonRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Unnamed" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="$PROJECT_DIR$/env/bin/python" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="plates" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/socket_test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
       <RunnerSettings RunnerId="PythonRunner" />
       <ConfigurationWrapper RunnerId="PythonRunner" />
       <method />
     </configuration>
-    <list size="1">
+    <list size="3">
       <item index="0" class="java.lang.String" itemvalue="Python.plates" />
+      <item index="1" class="java.lang.String" itemvalue="Python.plates_socket" />
+      <item index="2" class="java.lang.String" itemvalue="Python.Unnamed" />
     </list>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
@@ -423,30 +955,50 @@
     </task>
     <servers />
   </component>
+  <component name="TodoView" selected-index="4">
+    <todo-panel id="selected-file">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="false" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="false" />
+    </todo-panel>
+    <todo-panel id="default-changelist">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="false" />
+    </todo-panel>
+  </component>
   <component name="ToolWindowManager">
-    <frame x="1280" y="0" width="960" height="1181" extended-state="0" />
-    <editor active="true" />
+    <frame x="1280" y="0" width="1920" height="1181" extended-state="0" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18877006" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292683" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18207547" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32457787" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924527" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21318682" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1782364" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1782364" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18198875" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292683" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924527" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3227017" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2879925" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -464,9 +1016,16 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
+    <MESSAGE value="Big changes. Before restructure." />
+    <option name="LAST_COMMIT_MESSAGE" value="Big changes. Before restructure." />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <breakpoints-dialog>
+        <breakpoints-dialog />
+      </breakpoints-dialog>
+      <option name="time" value="40" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
@@ -480,169 +1039,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1872" max-vertical-offset="2034">
-          <caret line="104" column="0" selection-start-line="104" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/card-grid.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4914">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/input-card.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1926" max-vertical-offset="3042">
-          <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plates.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="126" max-vertical-offset="324">
-          <caret line="7" column="39" selection-start-line="7" selection-start-column="39" selection-end-line="7" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1872" max-vertical-offset="2034">
-          <caret line="104" column="0" selection-start-line="104" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/card-grid.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="100">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/input-card.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="820" max-vertical-offset="3024">
-          <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plates.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="126" max-vertical-offset="324">
-          <caret line="7" column="39" selection-start-line="7" selection-start-column="39" selection-end-line="7" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1206" max-vertical-offset="2052">
           <caret line="67" column="38" selection-start-line="67" selection-start-column="38" selection-end-line="67" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/card-grid.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="972" max-vertical-offset="3582">
-          <caret line="84" column="0" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/input-card.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2880">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plates.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="126" max-vertical-offset="324">
-          <caret line="7" column="39" selection-start-line="7" selection-start-column="39" selection-end-line="7" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1206" max-vertical-offset="2052">
-          <caret line="67" column="38" selection-start-line="67" selection-start-column="38" selection-end-line="67" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/card-grid.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1425" max-vertical-offset="3564">
-          <caret line="87" column="54" selection-start-line="87" selection-start-column="54" selection-end-line="87" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/input-card.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2754">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plates.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="126" max-vertical-offset="324">
-          <caret line="7" column="39" selection-start-line="7" selection-start-column="39" selection-end-line="7" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1206" max-vertical-offset="2052">
-          <caret line="67" column="38" selection-start-line="67" selection-start-column="38" selection-end-line="67" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/card-grid.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="100">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/input-card.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1520" max-vertical-offset="2628">
-          <caret line="107" column="47" selection-start-line="107" selection-start-column="13" selection-end-line="107" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plates.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="126" max-vertical-offset="324">
-          <caret line="7" column="39" selection-start-line="7" selection-start-column="39" selection-end-line="7" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1206" max-vertical-offset="2052">
-          <caret line="67" column="38" selection-start-line="67" selection-start-column="38" selection-end-line="67" selection-end-column="38" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -650,7 +1048,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3564">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -658,7 +1055,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="2228" max-vertical-offset="2628">
           <caret line="103" column="26" selection-start-line="103" selection-start-column="26" selection-end-line="103" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -674,7 +1070,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1206" max-vertical-offset="2052">
           <caret line="67" column="38" selection-start-line="67" selection-start-column="38" selection-end-line="67" selection-end-column="38" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -682,7 +1077,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="100">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -690,7 +1084,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1415" max-vertical-offset="2628">
           <caret line="103" column="26" selection-start-line="103" selection-start-column="26" selection-end-line="103" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -706,7 +1099,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1584" max-vertical-offset="2052">
           <caret line="88" column="76" selection-start-line="88" selection-start-column="76" selection-end-line="88" selection-end-column="76" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -714,7 +1106,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="2664" max-vertical-offset="3222">
           <caret line="148" column="60" selection-start-line="148" selection-start-column="60" selection-end-line="148" selection-end-column="60" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -722,7 +1113,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="100">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -738,7 +1128,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1584" max-vertical-offset="2052">
           <caret line="88" column="76" selection-start-line="88" selection-start-column="76" selection-end-line="88" selection-end-column="76" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -746,7 +1135,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="100">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -754,7 +1142,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1116" max-vertical-offset="1764">
           <caret line="62" column="44" selection-start-line="62" selection-start-column="44" selection-end-line="62" selection-end-column="44" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -770,7 +1157,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="198" max-vertical-offset="2052">
           <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="103" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -778,7 +1164,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="667" max-vertical-offset="2268">
           <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -786,7 +1171,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1350">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -798,42 +1182,225 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/plates.py">
+    <entry file="file:///beamline/perforce/Dev/SBS/3_Beamlines/3_04_SR13ID01_SWAXS/3_04_4_Equipment_Control/sw/Python/saxslibrarydev/beamline/config_SAXS.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="324">
-          <caret line="7" column="39" selection-start-line="7" selection-start-column="39" selection-end-line="7" selection-end-column="39" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1005" max-vertical-offset="1710">
+          <caret line="28" column="21" selection-start-line="28" selection-start-column="21" selection-end-line="28" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///beamline/perforce/Dev/SBS/3_Beamlines/3_04_SR13ID01_SWAXS/3_04_4_Equipment_Control/sw/Python/saxslibrarydev/env/lib/python2.7/site-packages/epics/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="247" max-vertical-offset="3060">
+          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_pluginbase.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.46972176" vertical-offset="7723" max-vertical-offset="8334">
+          <caret line="448" column="0" selection-start-line="448" selection-start-column="0" selection-end-line="448" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/env/lib/python2.7/site-packages/six.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3327645" vertical-offset="2901" max-vertical-offset="13734">
+          <caret line="177" column="0" selection-start-line="177" selection-start-column="0" selection-end-line="177" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///beamline/perforce/Dev/SBS/3_Beamlines/3_04_SR13ID01_SWAXS/3_04_4_Equipment_Control/sw/Python/saxslibrarydev/devices/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="611">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///beamline/perforce/Dev/SBS/3_Beamlines/3_04_SR13ID01_SWAXS/3_04_4_Equipment_Control/sw/Python/saxslibrarydev/beamline/descriptors.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.49918166" vertical-offset="667" max-vertical-offset="1278">
+          <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///beamline/perforce/Dev/SBS/3_Beamlines/3_04_SR13ID01_SWAXS/3_04_4_Equipment_Control/sw/Python/saxslibrarydev/env/lib/python2.7/site-packages/epics/ca.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.23047252" vertical-offset="5809" max-vertical-offset="29304">
+          <caret line="349" column="0" selection-start-line="349" selection-start-column="0" selection-end-line="349" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///beamline/perforce/Dev/SBS/3_Beamlines/3_04_SR13ID01_SWAXS/3_04_4_Equipment_Control/sw/Python/saxslibrarydev/env/lib/python2.7/site-packages/epics/pv.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.23047252" vertical-offset="2803" max-vertical-offset="12564">
+          <caret line="175" column="0" selection-start-line="175" selection-start-column="0" selection-end-line="175" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///beamline/perforce/Dev/SBS/3_Beamlines/3_04_SR13ID01_SWAXS/3_04_4_Equipment_Control/sw/Python/saxslibrarydev/env/lib/python2.7/site-packages/epics/device.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="4945" max-vertical-offset="5922">
+          <caret line="290" column="0" selection-start-line="290" selection-start-column="0" selection-end-line="290" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///beamline/perforce/Dev/SBS/3_Beamlines/3_04_SR13ID01_SWAXS/3_04_4_Equipment_Control/sw/Python/saxslibrarydev/devices/beamline_device.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.76374155" vertical-offset="0" max-vertical-offset="1037">
+          <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/socket_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="954">
+          <caret line="28" column="64" selection-start-line="28" selection-start-column="64" selection-end-line="28" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/client.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-24.0" vertical-offset="0" max-vertical-offset="1242">
+          <caret line="36" column="10" selection-start-line="28" selection-start-column="9" selection-end-line="36" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/lib.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33333334" vertical-offset="209101" max-vertical-offset="255546">
+          <caret line="11643" column="4" selection-start-line="11643" selection-start-column="4" selection-end-line="11643" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/HTML5.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2589041" vertical-offset="27837" max-vertical-offset="42354">
+          <caret line="1557" column="28" selection-start-line="1557" selection-start-column="28" selection-end-line="1557" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///beamline/perforce/Dev/SBS/3_Beamlines/3_04_SR13ID01_SWAXS/3_04_4_Equipment_Control/sw/Python/saxslibrarydev/beamline/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1512">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/bower_components/core-tooltip/core-tooltip.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="2.0" vertical-offset="54" max-vertical-offset="4014">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/bower_components/core-tooltip/core-tooltip.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.0" vertical-offset="324" max-vertical-offset="1980">
+          <caret line="31" column="14" selection-start-line="31" selection-start-column="9" selection-end-line="31" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/env/lib/python2.7/site-packages/trollius/events.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3328767" vertical-offset="2529" max-vertical-offset="11502">
+          <caret line="154" column="0" selection-start-line="154" selection-start-column="0" selection-end-line="154" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/env/lib/python2.7/site-packages/autobahn/asyncio/websocket.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2619" max-vertical-offset="6624">
+          <caret line="159" column="0" selection-start-line="159" selection-start-column="0" selection-end-line="159" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///beamline/perforce/Dev/SBS/3_Beamlines/3_04_SR13ID01_SWAXS/3_04_4_Equipment_Control/sw/Python/saxslibrarydev/devices/scanners_saxs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="630">
+          <caret line="17" column="42" selection-start-line="17" selection-start-column="42" selection-end-line="17" selection-end-column="42" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/index.html">
+    <entry file="file:///beamline/perforce/Dev/SBS/3_Beamlines/3_04_SR13ID01_SWAXS/3_04_4_Equipment_Control/sw/Python/saxslibrarydev/devices/scan_saxs.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.0" vertical-offset="1084" max-vertical-offset="2034">
-          <caret line="72" column="54" selection-start-line="72" selection-start-column="52" selection-end-line="72" selection-end-column="54" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1556" max-vertical-offset="3960">
+          <caret line="72" column="35" selection-start-line="72" selection-start-column="35" selection-end-line="72" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/env/lib/python2.7/site-packages/autobahn/websocket/protocol.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="23647" max-vertical-offset="82044">
+          <caret line="1327" column="0" selection-start-line="1327" selection-start-column="0" selection-end-line="1327" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plates.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="396">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plates_socket.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="810" max-vertical-offset="2052">
+          <caret line="62" column="53" selection-start-line="62" selection-start-column="53" selection-end-line="62" selection-end-column="53" />
+          <folding>
+            <element signature="e#0#86#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/input-card.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1083" max-vertical-offset="2952">
+          <caret line="27" column="20" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="20" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/static/sample-scan-card.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="847">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="108" max-vertical-offset="594">
+          <caret line="6" column="14" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/card-chooser.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.6666665" vertical-offset="0" max-vertical-offset="450">
+          <caret line="7" column="48" selection-start-line="7" selection-start-column="48" selection-end-line="7" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/protein-card.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.6666665" vertical-offset="270" max-vertical-offset="2772">
+          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6666667" vertical-offset="2268" max-vertical-offset="5364">
+          <caret line="125" column="114" selection-start-line="125" selection-start-column="114" selection-end-line="125" selection-end-column="114" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/static/card-grid.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.075472" vertical-offset="1268" max-vertical-offset="4932">
-          <caret line="106" column="25" selection-start-line="86" selection-start-column="20" selection-end-line="106" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/input-card.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.14622056" vertical-offset="1412" max-vertical-offset="3042">
-          <caret line="85" column="25" selection-start-line="85" selection-start-column="25" selection-end-line="85" selection-end-column="25" />
+        <state vertical-scroll-proportion="0.4483188" vertical-offset="2322" max-vertical-offset="4950">
+          <caret line="149" column="42" selection-start-line="149" selection-start-column="42" selection-end-line="149" selection-end-column="42" />
           <folding />
         </state>
       </provider>

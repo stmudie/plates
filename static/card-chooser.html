@@ -1,0 +1,19 @@
+<link rel="import" href="bower_components/polymer/polymer.html">
+<link rel="import" href="protein-card.html">
+<link rel="import" href="sample-scan-card.html">
+
+<polymer-element name="card-chooser" attributes = "card full sample handleMore handleClear" noscript>
+
+    <template>
+        <template bind if = "{{ card == 'plate40' }}">
+            <sample-scan-card sample = "{{ sample }}" on-more-tap="{{ handleMore }}" on-clear-tap="{{ handleClear }}" on-delete-tap="{{ handleClear }}"></sample-scan-card>
+        </template>
+
+        <template bind if = "{{ card == 'protein' }}">
+            <protein-card sample = "{{ sample }}" on-more-tap="{{ handleMore }}" on-clear-tap="{{ handleClear }}" on-delete-tap="{{ handleClear }}"></protein-card>
+        </template>
+
+    </template>
+
+</polymer-element>
+

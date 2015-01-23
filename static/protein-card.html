@@ -1,0 +1,149 @@
+<link rel="import" href="bower_components/polymer/polymer.html">
+<link rel="import" href="bower_components/core-menu/core-menu.html">
+<link rel="import" href="bower_components/paper-item/paper-item.html">
+<link rel="import" href="bower_components/paper-input/paper-input.html">
+<link rel="import" href="bower_components/paper-checkbox/paper-checkbox.html">
+<link rel="import" href="bower_components/paper-dropdown-menu/paper-dropdown-menu.html">
+<link rel="import" href="bower_components/paper-dropdown/paper-dropdown.html">
+<link rel="import" href="input-card.html">
+
+<polymer-element name="protein-card">
+    <template>
+        <style>
+            paper-dropdown-menu {
+                margin-bottom: 0px;
+                margin-top: 0px;
+                font-size: 14px;
+            }
+            .sample {
+                background-color: rgb(213, 251, 195);
+            }
+            .buffer {
+                background-color: paleturquoise;
+            }
+            .repeat_buffer {
+                background-color: lightblue;
+            }
+            .water {
+                background-color: blue;
+            }
+            paper-dropdown-menu.water::shadow #label {
+                color: white;
+                font-weight: bold;
+            }
+            .protein_killer {
+                background-color: red;
+            }
+            paper-dropdown-menu.protein_killer::shadow #label {
+                color: white;
+                font-weight: bold;
+            }
+            .detergent {
+                background-color: yellow;
+            }
+            paper-dropdown-menu.detergent::shadow #label {
+                font-weight: bold;
+            }
+
+        </style>
+        <input-card id="card" full="{{ full }}" uid="{{ sample.uid }}" selected="{{ sample.selected }}" description="{{ sample.description }}"
+                    class="card">
+
+            <paper-input draggable="false" value="{{ sample.samplename }}" label="Sample Name"
+                         class="title"></paper-input>
+            </core-label>
+            <paper-dropdown-menu label="Sample Type">
+                <paper-dropdown class="dropdown" duration="100">
+                    <core-menu class="menu" selected="{{ sampletype }}" on-core-select="{{ handleSampleSelect }}">
+                        <paper-item>Sample</paper-item>
+                        <paper-item>Buffer</paper-item>
+                        <paper-item>Repeat Buffer</paper-item>
+                    </core-menu>
+                </paper-dropdown>
+            </paper-dropdown-menu>
+            <paper-dropdown-menu id="wash" label="Wash Type">
+                <paper-dropdown class="dropdown" duration="100">
+                    <core-menu class="menu" selected="{{ washtype }}" on-core-select="{{ handleWashSelect }}">
+                        <paper-item>None</paper-item>
+                        <paper-item>Water</paper-item>
+                        <paper-item>Protein Killer</paper-item>
+                        <paper-item>Detergent</paper-item>
+                    </core-menu>
+                </paper-dropdown>
+            </paper-dropdown-menu>
+
+        </input-card>
+    </template>
+
+    <script>
+
+        Polymer({
+            publish: {
+                washtype: {
+                    value: 0,
+                    reflect: true
+                },
+                sampletype: {
+                    value: -1,
+                    reflect: true
+                }
+            },
+            handleSampleSelect: function(event){
+                var self = this;
+                if (event.detail.isSelected) {
+
+                    switch (self.sampletype){
+                        case 0:
+                            this.$.card.classList.add('sample');
+                            this.$.card.classList.remove('buffer');
+                            this.$.card.classList.remove('repeat_buffer');
+                            break;
+                        case 1:
+                            this.$.card.classList.remove('sample');
+                            this.$.card.classList.add('buffer');
+                            this.$.card.classList.remove('repeat_buffer');
+                            break;
+                        case 2:
+                            this.$.card.classList.remove('sample');
+                            this.$.card.classList.remove('buffer');
+                            this.$.card.classList.add('repeat_buffer');
+                            break;
+                    }
+                }
+            },
+            handleWashSelect: function(event){
+                var self = this;
+                if (event.detail.isSelected) {
+
+                    switch (self.washtype){
+                        case 0:
+                            this.$.wash.classList.add('none');
+                            this.$.wash.classList.remove('water');
+                            this.$.wash.classList.remove('protein_killer');
+                            this.$.wash.classList.remove('detergent');
+                            break;
+                        case 1:
+                            this.$.wash.classList.remove('none');
+                            this.$.wash.classList.add('water');
+                            this.$.wash.classList.remove('protein_killer');
+                            this.$.wash.classList.remove('detergent');
+                            break;
+                        case 2:
+                            this.$.wash.classList.remove('none');
+                            this.$.wash.classList.remove('water');
+                            this.$.wash.classList.add('protein_killer');
+                            this.$.wash.classList.remove('detergent');
+                            break;
+                        case 3:
+                            this.$.wash.classList.remove('none');
+                            this.$.wash.classList.remove('water');
+                            this.$.wash.classList.remove('protein_killer');
+                            this.$.wash.classList.add('detergent');
+                            break;
+                    }
+                }
+            }
+        })
+    </script>
+
+</polymer-element>

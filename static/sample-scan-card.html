@@ -1,0 +1,28 @@
+<link rel="import" href="bower_components/polymer/polymer.html">
+<link rel="import" href="bower_components/paper-input/paper-input.html">
+<link rel="import" href="bower_components/paper-checkbox/paper-checkbox.html">
+<link rel="import" href="input-card.html">
+
+<polymer-element name="sample-scan-card" attributes = "full sample" noscript>
+    <template>
+        <style>
+            paper-checkbox.blue::shadow #ink[checked] {
+                color: #4285f4;
+            }
+            paper-checkbox.blue::shadow #checkbox.checked {
+                border-color: #4285f4;
+            }
+        </style>
+        <input-card full="{{ full }}" uid="{{ sample.uid }}" selected="{{ sample.selected }}" description="{{ sample.description }}"
+                    class="card">
+
+            <paper-input draggable="false" value="{{ sample.samplename }}" label="Sample Name"
+                         class="title"></paper-input>
+            <core-label center horizontal layout style="width: 100px">
+                <paper-checkbox flex class="blue" checked="{{ sample.subgrid }}" for></paper-checkbox>
+                <div>Sub Grid</div>
+            </core-label>
+
+        </input-card>
+    </template>
+</polymer-element>

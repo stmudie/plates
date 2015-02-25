@@ -33,6 +33,12 @@
                 margin: 1.2% 1.2% 50px;
             }
 
+            .sortable-dragging card-chooser::shadow ::shadow input-card {
+                opacity: 0.5;
+                -webkit-transform: scale(0.8);
+                transition: opacity 0.2s, -webkit-transform 0.2s ease-out;
+            }
+
             [draggable] {
                 -moz-user-select: none;
                 -khtml-user-select: none;
@@ -69,6 +75,7 @@
             }
             .sub_fab_show {
                 visibility: visible;
+                margin-bottom: 8px;
             }
             .sub_fab_show:hover {
                 background-color: red;
@@ -81,10 +88,14 @@
                 font-weight: bold;
                 margin-top: 0;
             }
+            .edit_fab {
+                background-color: #00a1a1;
+            }
 
         </style>
         <div id="toplevel">
-            <div id="fab_group" on-mouseover = "{{ handleHoverAdd }}" on-mouseout = "{{ handleHoverEnd }}" style="width: 150px; padding: 5px;" horizontal justified layout center>
+            <div horizontal left layout center>
+            <div id="fab_group" on-mouseover = "{{ handleHoverAdd }}" on-mouseout = "{{ handleHoverEnd }}" style="width: 150px; padding: 5px; float: left" >
                 <paper-fab id="fabadd" icon="{{ icon }}" class = "fabadd"></paper-fab>
                 <core-tooltip label="8×5 Grid" noarrow="True">
                     <!--<paper-fab id="addgrid" icon="view-module"  mini on-tap="{{ handleAddCard }}" class = "sub_fab" ></paper-fab>-->
@@ -95,23 +106,46 @@
                     <paper-fab id="add96Well" src="96Well.png" mini on-tap="{{ handleAddCard }}" class = "sub_fab"></paper-fab>
                 </core-tooltip>
             </div>
-            <ul id='sortable' class='sortable'>
+            <div id="fab_edit_group" style="width: 250px; padding: 5px; float: left" >
+                <core-tooltip label="Select All" noarrow="True">
+                    <paper-fab id="select_all" icon="check-box"  mini on-tap="{{ handleSelectAll }}" class = "edit_fab" ></paper-fab>
+                </core-tooltip>
+                <core-tooltip label="Deselect All" icon="" noarrow="True">
+                    <paper-fab id="deselect_all" icon="check-box-outline-blank" mini on-tap="{{ handleDeselectAll }}" class = "edit_fab"></paper-fab>
+                </core-tooltip>
+                <core-tooltip label="Fill Right" icon="" noarrow="True">
+                    <paper-fab id="fill_right" icon="forward" mini on-tap="{{ handleFillRight }}" class = "edit_fab"></paper-fab>
+                </core-tooltip>
+                <core-tooltip label="Fill Selected" icon="" noarrow="True">
+                    <paper-fab id="fill_selected" icon="exit-to-app" mini on-tap="{{ handleFillSelected }}" class = "edit_fab"></paper-fab>
+                </core-tooltip>
+            </div>
+            </div>
+            <ul id='sortable' class='sortable' on-mousedown = "{{ mousedown }}" on-mousemove= "{{ mousemove }}" on-mouseup = "{{ mouseup }}">
                 <template repeat="{{sample in samples.samples}}">
                     <li>
                         <!--<sample-scan-card sample = "{{ sample }}" on-more-tap="{{ handleMore }}" on-clear-tap="{{ handleClear }}" on-delete-tap="{{ handleClear }}"></sample-scan-card>-->
-                        <card-chooser card = "{{ cardtype }}" sample = "{{ sample }}" on-more-tap="{{ handleMore }}" on-clear-tap="{{ handleClear }}" on-delete-tap="{{ handleClear }}"></card-chooser>
+                        <card-chooser card = "{{ cardtype }}" sample = "{{ sample }}" on-more-tap="{{ handleMore }}" on-clear-tap="{{ handleClear }}" on-delete-tap="{{ handleClear }}" on-tap="{{ handleFocus }}" class="test"></card-chooser>
                     </li>
                 </template>
             </ul>
         </div>
         <paper-dialog id = "more_dialog">
             <template bind="{{ samples.selected_sample as sample }}">
-                <sample-scan-card full = "true" sample = "{{ sample }}" on-clear-tap="{{ handleClear }}" on-delete-tap="{{ handleDelete }}"></sample-scan-card>
+                <card-chooser full = "true" card = "{{ cardtype }}" sample = "{{ sample }}" on-more-tap="{{ handleMore }}" on-clear-tap="{{ handleClear }}" on-delete-tap="{{ handleClear }}" on-focus="{{ handleFocus }}"></card-chooser>
             </template>
         </paper-dialog>
     </template>
 
     <script>
+        var overlap = function(rect1, rect2){
+            var no_overlap = rect1.left > rect2.right ||
+                             rect2.left > rect1.right ||
+                             rect1.top > rect2.bottom ||
+                             rect2.top > rect1.bottom;
+            return !no_overlap;
+        };
+
         Polymer({
             publish: {
                 gridwidth: {
@@ -128,7 +162,7 @@
                 }
             },
             icon: "add",
-            handleHoverAdd: function(event, detail, sender) {
+            handleHoverAdd: function (event, detail, sender) {
                 var self = this;
 
                 setTimeout(function () {
@@ -142,8 +176,8 @@
                 this.$.fabadd.classList.add('fabadd_select');
 
             },
-            handleHoverEnd: function(event, detail, sender) {
-               var self = this;
+            handleHoverEnd: function (event, detail, sender) {
+                var self = this;
 
                 setTimeout(function () {
                     if (self.$.fabadd.classList.contains('fabadd_select') == false) {
@@ -164,11 +198,10 @@
             handleMore: function (event, detail, sender) {
                 var d = this.$.more_dialog;
                 d.toggle();
-                console.log(this.samples.selected_sample);
                 this.samples.select_by_uid(sender.sample.uid);
 
             },
-            handleAddCard: function (event, detail, sender){
+            handleAddCard: function (event, detail, sender) {
                 if (sender.id == 'add8x5grid') {
                     this.gridwidth = 8;
                     this.cardheight = 140;
@@ -178,40 +211,107 @@
                     this.gridwidth = 12;
                     this.cardheight = 200;
                     this.cardtype = 'protein';
-                    this.samples.new_grid(96);
+                    this.samples.new_grid(24);
                 } else {
                     this.samples.add_sample();
                 }
             },
+            handleSelectAll: function (event, detail, sender) {
+                this.samples.select_all(true)
+            },
+            handleDeselectAll: function (event, detail, sender) {
+                this.samples.select_all(false)
+            },
+            handleFillRight: function (event, detail, sender) {
+                this.samples.fill('right');
+            },
+            handleFillSelected: function (event, detail, sender) {
+                this.samples.fill('selected');
+            },
+            handleFocus: function(event, detail, sender) {
+                this.samples.set_focus(sender.sample.uid);
+            },
+            mousedown: function(event){
+                if (event.toElement.id == 'sortable'){
+                    if (event.shiftKey) {
+                        this.select_type = 'deselect'
+                    } else if (event.ctrlKey) {
+                        this.select_type = 'add'
+                    } else {
+                        this.select_type = 'select'
+                    }
+                    this.rectangles = [];
+                    this.selecting = true;
+                    this.position1 = [event.x, event.y];
+                    this.style.cursor = 'crosshair';
+                    var list = event.target.children;
+
+                    for (var i = 1; i < list.length; i++) {
+                        this.rectangles.push(list[i].getBoundingClientRect());
+                    }
+                }
+            },
+            mousemove: function(event){
+                if (this.selecting == true) {
+                    var self = this;
+                    var rect = {left: Math.min(this.position1[0], event.x), right: Math.max(this.position1[0], event.x),
+                                top:  Math.min(this.position1[1], event.y), bottom: Math.max(this.position1[1], event.y)};
+                    this.rectangles.forEach(function(e, index) {
+                        overlapped = overlap(rect, e);
+                        switch (self.select_type){
+                            case 'select':
+                                self.samples.samples[index].selected = overlapped;
+                                break;
+                            case 'add':
+                                if (overlapped) {
+                                    self.samples.samples[index].selected = true;
+                                }
+                                break;
+                            case 'deselect':
+                                if (overlapped) {
+                                    self.samples.samples[index].selected = false;
+                                }
+                                break;
+                        }
+                        self.samples.samples[index].highlighted = overlapped;
+                    })
+                }
+            },
+            mouseup: function(event){
+                if (this.selecting == true) {
+                    var self = this;
+                    this.style.cursor = 'auto';
+                    this.selecting = false;
+                    var rect = {left: Math.min(this.position1[0], event.x), right: Math.max(this.position1[0], event.x),
+                                top:  Math.min(this.position1[1], event.y), bottom: Math.max(this.position1[1], event.y)};
+                    this.rectangles.forEach(function(e, index) {
+                        overlapped = overlap(rect, e);
+                        switch (self.select_type){
+                            case 'select':
+                                self.samples.samples[index].selected = overlapped;
+                                break;
+                            case 'add':
+                                if (overlapped) {
+                                    self.samples.samples[index].selected = true;
+                                }
+                                break;
+                            case 'deselect':
+                                if (overlapped) {
+                                    self.samples.samples[index].selected = false;
+                                }
+                                break;
+                        }
+                        self.samples.samples[index].highlighted = false;
+                    })
+                }
+            },
+
             ready: function () {
 
-                this.$.toplevel.addEventListener("mousedown", function(event){
-                    if (event.toElement.id == 'sortable'){
-                        this.selecting = true;
-                        this.position1 = [event.x, event.y];
-                        this.style.cursor = 'crosshair';
-                        console.log(this.childNodes);
-                    }
-                });
-
-                this.$.toplevel.addEventListener("mouseup", function(event){
-                    if (this.selecting == true) {
-                        this.style.cursor = 'auto';
-                        this.selecting = false;
-                    }
-
-                });
-
-                this.$.toplevel.addEventListener("mousemove", function(event){
-                    if (this.selecting == true) {
-                        console.log(event.x, event.y);
-                    }
-                });
-
                 var sortable = this.$.sortable;
+
                 nativesortable(sortable, {
                     change: function () {
-                        console.log('move');
                     },
                     warp: false //With warp true elements swap places
                 });
@@ -221,8 +321,9 @@
                     self.uid = 0;
                     self.samples = [];
                     self.selected_sample = {};
+                    self.focussed_sample = {};
                     self.add_sample = function () {
-                        self.samples.push({'uid': self.uid, 'selected': true, 'description': '', 'subgrid': false});
+                        self.samples.push({'uid': self.uid, 'selected': false, 'highlighted': false, 'focused': false, 'data': {}});
                         self.uid++;
                     };
                     self.new_grid = function (number) {
@@ -239,7 +340,7 @@
                         self.samples.some(function (sample) {
                             if (sample.uid == uid) {
                                 if (clearonly == true) {
-                                    self.samples[index] = {'uid': uid, 'selected': true, 'description': '', 'subgrid': false}
+                                    self.samples[index] = {'uid': uid, 'selected': false, 'highlighted': false, 'focused': false, 'data': {}}
                                 } else {
                                     self.samples.splice(index, 1);
                                 }
@@ -258,8 +359,41 @@
                             index++;
                         });
                     };
+                    self.set_focus = function (uid) {
+                        self.samples.forEach(function (sample) {
+                            sample.focused = sample.uid == uid;
+                            if (sample.focused) {
+                                self.focussed_sample = sample
+                            }
+                        });
+                    };
+                    self.select_all = function (all) {
+                        self.samples.forEach(function (sample) {
+                            sample.selected = all
+                        })
+                    };
+                    self.fill = function(type) {
+                        switch (type){
+                            case 'right':
+                                break;
+                            case 'selected':
+                                self.samples.forEach(function (sample) {
+                                    if (sample.selected && !sample.focused) {
+                                        sample.samplename = self.focussed_sample.samplename;
+                                        sample.description = self.focussed_sample.description;
+                                        sample.data = {};
+                                        for (var attr in self.focussed_sample.data){
+                                            sample.data[attr] = self.focussed_sample.data[attr]
+                                        }
+                                    }
+                                });
+                                break;
+                        }
+                    }
                 }
                 this.samples = new samples();
+
+
             }
         });
 

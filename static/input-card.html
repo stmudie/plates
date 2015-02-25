@@ -28,7 +28,10 @@
                 display: block;
                 position: relative;
                 color: #a4a4a4;
-                background-color: white;
+                /*background-color: rgb({{ highlighted ? 0 : 255 }},{{ highlighted ? 0 : 255 }},{{ highlighted ? 0 : 255 }});*/
+                background-color: {{ highlighted ? 'moccasin !important' : 'white' }};
+                outline: 3px goldenrod;
+                outline-style: {{ focused ? 'solid' : 'none' }};
                 padding: 20px;
                 width: 95%;
                 height: 100%;
@@ -129,14 +132,20 @@
         Polymer({
             publish: {
                 selected: {
-                    value: true,
-                    reflect: true
+                    value: true
                 },
                 uid: {
-                    value: 0,
-                    reflect: true
+                    value: 0.
                 },
                 full: {
+                    value: false,
+                    reflect: true
+                },
+                highlighted: {
+                    value: false,
+                    reflect: true
+                },
+                focused: {
                     value: false,
                     reflect: true
                 },

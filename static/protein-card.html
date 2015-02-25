@@ -7,7 +7,7 @@
 <link rel="import" href="bower_components/paper-dropdown/paper-dropdown.html">
 <link rel="import" href="input-card.html">
 
-<polymer-element name="protein-card">
+<polymer-element name="protein-card" attributes="full sample data">
     <template>
         <style>
             paper-dropdown-menu {
@@ -15,8 +15,11 @@
                 margin-top: 0px;
                 font-size: 14px;
             }
+            paper-input.text_colour::shadow #label {
+                color: black;
+            }
             .sample {
-                background-color: rgb(213, 251, 195);
+                background-color: hsl(108, 80%, {{ 90 - 50*sample.data.conc/5.0 }}%);
             }
             .buffer {
                 background-color: paleturquoise;
@@ -46,15 +49,15 @@
             }
 
         </style>
-        <input-card id="card" full="{{ full }}" uid="{{ sample.uid }}" selected="{{ sample.selected }}" description="{{ sample.description }}"
+        <input-card id="card" full="{{ full }}" uid="{{ sample.uid }}" selected="{{ sample.selected }}" highlighted="{{ sample.highlighted }}" focused="{{ sample.focused }}" description="{{ sample.description }}"
                     class="card">
 
             <paper-input draggable="false" value="{{ sample.samplename }}" label="Sample Name"
-                         class="title"></paper-input>
+                         class="title" class="text_colour"></paper-input>
             </core-label>
             <paper-dropdown-menu label="Sample Type">
                 <paper-dropdown class="dropdown" duration="100">
-                    <core-menu class="menu" selected="{{ sampletype }}" on-core-select="{{ handleSampleSelect }}">
+                    <core-menu class="menu" selected="{{ sample.data.sampletype }}" on-core-select="{{ handleSampleSelect }}">
                         <paper-item>Sample</paper-item>
                         <paper-item>Buffer</paper-item>
                         <paper-item>Repeat Buffer</paper-item>
@@ -63,7 +66,7 @@
             </paper-dropdown-menu>
             <paper-dropdown-menu id="wash" label="Wash Type">
                 <paper-dropdown class="dropdown" duration="100">
-                    <core-menu class="menu" selected="{{ washtype }}" on-core-select="{{ handleWashSelect }}">
+                    <core-menu class="menu" selected="{{ sample.data.washtype }}" on-core-select="{{ handleWashSelect }}">
                         <paper-item>None</paper-item>
                         <paper-item>Water</paper-item>
                         <paper-item>Protein Killer</paper-item>
@@ -71,28 +74,51 @@
                     </core-menu>
                 </paper-dropdown>
             </paper-dropdown-menu>
-
+            <paper-input value="{{ sample.data.conc }}" label="Concentration" ></paper-input>
+            <template bind if = "{{ full }}">
+                <paper-input value="{{ sample.data.mw }}" label="MW"></paper-input>
+                <paper-input-decorator id="seq_dec" label="Sequence" error="Invalid Character">
+                    <input id="seq_in" is="core-input" pattern="^[GAVLIMFWPSTCYNQDEKRH]*" value="{{ sample.data.seq }}">
+                </paper-input-decorator>
+            </template>
         </input-card>
     </template>
 
     <script>
-
         Polymer({
             publish: {
-                washtype: {
-                    value: 0,
+                'sample.data.conc': {
+                    value: 1,
                     reflect: true
-                },
-                sampletype: {
-                    value: -1,
-                    reflect: true
+                }
+            },
+            observe: {
+                'sample.data.seq': 'isAnAminoAcid',
+                data: 'test'
+            },
+            isAnAminoAcid: function(oldvalue, newvalue){
+                if (this.$.seq_dec != null) {
+                    this.$.seq_dec.isInvalid = !this.$.seq_in.validity.valid;
+                }
+            },
+            test: function(oldvalue, newvalue){
+                if (!newvalue.hasOwnProperty('washtype')){
+                    this.$.wash.classList.remove('none');
+                    this.$.wash.classList.remove('water');
+                    this.$.wash.classList.remove('protein_killer');
+                    this.$.wash.classList.remove('detergent');
+                }
+                if (!newvalue.hasOwnProperty('sampletype')) {
+                    this.$.card.classList.remove('sample');
+                    this.$.card.classList.remove('buffer');
+                    this.$.card.classList.remove('repeat_buffer');
                 }
             },
             handleSampleSelect: function(event){
                 var self = this;
                 if (event.detail.isSelected) {
 
-                    switch (self.sampletype){
+                    switch (self.sample.data.sampletype){
                         case 0:
                             this.$.card.classList.add('sample');
                             this.$.card.classList.remove('buffer');
@@ -115,7 +141,7 @@
                 var self = this;
                 if (event.detail.isSelected) {
 
-                    switch (self.washtype){
+                    switch (self.sample.data.washtype){
                         case 0:
                             this.$.wash.classList.add('none');
                             this.$.wash.classList.remove('water');

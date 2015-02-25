@@ -12,5 +12,9 @@ def hello_world():
 def client():
     return render_template('client.html')
 
+@app.route('/epics')
+def epics():
+    return render_template('epics.html')
+
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0')

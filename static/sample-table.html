@@ -1,0 +1,84 @@
+<link rel="import" href="bower_components/polymer/polymer.html">
+<link rel="import" href="bower_components/slickgrid-element/slickgrid-element.html">
+<link rel="import" href="bower_components/paper-item/paper-item.html">
+<script src="bower_components/underscore/underscore-min.js"></script>
+
+<polymer-element name="sample-table">
+    <template>
+        <slickgrid-element columns = "{{ columns }}" data = "{{ data }}"></slickgrid-element>
+    </template>
+    <script>
+        Polymer('sample-table', {
+            publish: {
+                samples: {
+                    value: '',
+                    reflect: true
+                },
+                columns: {
+                    value: '[]',
+                    reflect: true
+                },
+                data: {
+                    value: '[]',
+                    reflect: true
+                },
+                ignoredkeys: {
+                    value: [],
+                    reflect: true
+                },
+                updated: {
+                    value: 0
+                },
+                observe: {
+                    updated: 'samplesupdated'
+                }
+            },
+            samplesupdated: function(){
+                if (this.samples.samples.length == 0) { return; }
+                fields = _.difference(Object.keys(this.samples.samples[0]), this.ignoredkeys);
+                datafields = _.difference(Object.keys(this.samples.samples[0].data), this.ignoredkeys);
+
+                temparray = [];
+                fields.forEach(function(e){
+                    temparray.push({id: e.toLowerCase(), name: e, field: e.toLowerCase(), editor: 'TextEditor'})
+                });
+                datafields.forEach(function(e){
+                    temparray.push({id: e.toLowerCase(), name: e, field: e.toLowerCase(), editor: 'TextEditor'})
+                });
+
+                this.columns = JSON.stringify(temparray);
+
+                temparray = [];
+                this.samples.samples.forEach(function(sample){
+                    tempdict = {};
+                    fields.forEach(function(e){
+                        tempdict[e.toLowerCase()] = sample[e];
+                    });
+                    datafields.forEach(function(e){
+                        tempdict[e.toLowerCase()] = sample.data[e];
+                    });
+                    temparray.push(tempdict);
+                });
+                this.data = JSON.stringify(temparray);
+            },
+            dataChanged: function(oldValue, newValue){
+                var self = this;
+
+                var data = JSON.parse(newValue);
+
+                data.forEach(function(obj, index){
+                    var fields = Object.keys(obj);
+                    var datafields = _.difference(fields, Object.keys(self.samples.samples[index]));
+                    fields = _.difference(fields, datafields);
+
+                    fields.forEach(function(field){
+                        self.samples.samples[index][field] = obj[field];
+                    });
+                    datafields.forEach(function(field){
+                        self.samples.samples[index].data[field] = obj[field];
+                    });
+                });
+            }
+        });
+    </script>
+</polymer-element>

@@ -10,16 +10,26 @@
 <polymer-element name="protein-card" attributes="full sample data">
     <template>
         <style>
-            paper-dropdown-menu {
+            paper-dropdown-menu{
                 margin-bottom: 0px;
                 margin-top: 0px;
                 font-size: 14px;
             }
-            paper-input.text_colour::shadow #label {
-                color: black;
+            paper-dropdown-menu paper-item{
+                color: #a4a4a4;
+            }
+            paper-dropdown-menu::shadow #label,  ::shadow #arrow {
+                color: {{ conc_text_colour }};
+            }
+            paper-input::shadow #input::-webkit-input-placeholder {
+                color: {{ conc_text_colour }};
+            }
+            paper-input::shadow #input::-moz-placeholder {
+                color: {{ conc_text_colour }};
             }
             .sample {
-                background-color: hsl(108, 80%, {{ 90 - 50*sample.data.conc/5.0 }}%);
+                color: {{ conc_text_colour }};
+                background-color: hsl(108, 80%, {{ conc_lum }}%);
             }
             .buffer {
                 background-color: paleturquoise;
@@ -53,7 +63,7 @@
                     class="card">
 
             <paper-input draggable="false" value="{{ sample.samplename }}" label="Sample Name"
-                         class="title" class="text_colour"></paper-input>
+                         class="title"></paper-input>
             </core-label>
             <paper-dropdown-menu label="Sample Type">
                 <paper-dropdown class="dropdown" duration="100">
@@ -94,7 +104,18 @@
             },
             observe: {
                 'sample.data.seq': 'isAnAminoAcid',
-                data: 'test'
+                //data: 'test',
+                'sample.data.sampletype': 'handleSampleSelect',
+                'sample.data.samplewash': 'handleWashSelect'
+            },
+            computed: {
+                conc_lum: 'calc_conc_lum(sample.data.conc)',
+                conc_text_colour: 'calc_conc_text_colour(conc_lum)'
+            },
+            ready: function(){
+                if (!this.sample.data.hasOwnProperty('sampletype')) { this.sample.data.sampletype = ''}; //This ensures that the sample bind is populated with these keys, even if values not set yet. Important for discovery in other tools.
+                if (!this.sample.data.hasOwnProperty('washtype')) { this.sample.data.washtype = ''};
+                if (!this.sample.data.hasOwnProperty('seq')) { this.sample.data.seq = ''};
             },
             isAnAminoAcid: function(oldvalue, newvalue){
                 if (this.$.seq_dec != null) {
@@ -102,22 +123,36 @@
                 }
             },
             test: function(oldvalue, newvalue){
-                if (!newvalue.hasOwnProperty('washtype')){
+                if (!this.data.hasOwnProperty('washtype')){
                     this.$.wash.classList.remove('none');
                     this.$.wash.classList.remove('water');
                     this.$.wash.classList.remove('protein_killer');
                     this.$.wash.classList.remove('detergent');
                 }
-                if (!newvalue.hasOwnProperty('sampletype')) {
+                if (!this.data.hasOwnProperty('sampletype')) {
                     this.$.card.classList.remove('sample');
                     this.$.card.classList.remove('buffer');
                     this.$.card.classList.remove('repeat_buffer');
                 }
             },
+            calc_conc_lum: function(conc){
+                if (conc < 0.1) { return 90 - conc*100} else
+                if (conc < 1)   { return 80 - conc*40} else
+                if (conc < 10)  { return 40 - conc*3} else
+                                { return 10 - conc}
+            },
+            calc_conc_text_colour: function(lum){
+                if (isNaN(lum)) { return "grey"};
+                if (this.sample.data.sampletype != 0) { return "grey"};
+                if (lum > 70) { return "grey"} else
+                if (lum > 40) { return "black"} else
+                              { return "white"}
+            },
             handleSampleSelect: function(event){
                 var self = this;
-                if (event.detail.isSelected) {
-
+                //if (event.detail.isSelected) {
+                    self.sample.data.sampletype = parseInt(self.sample.data.sampletype);
+                    //self.sample.data.conc = 0;
                     switch (self.sample.data.sampletype){
                         case 0:
                             this.$.card.classList.add('sample');
@@ -134,14 +169,19 @@
                             this.$.card.classList.remove('buffer');
                             this.$.card.classList.add('repeat_buffer');
                             break;
+                        default:
+                            this.$.card.classList.remove('sample');
+                            this.$.card.classList.remove('buffer');
+                            this.$.card.classList.remove('repeat_buffer');
+                            break;
                     }
-                }
+                //}
             },
             handleWashSelect: function(event){
                 var self = this;
-                if (event.detail.isSelected) {
-
-                    switch (self.sample.data.washtype){
+                //if (event.detail.isSelected) {
+                    self.sample.data.washtype = parseInt(self.sample.data.washtype);
+                    switch (parseInt(self.sample.data.washtype)){
                         case 0:
                             this.$.wash.classList.add('none');
                             this.$.wash.classList.remove('water');
@@ -166,8 +206,13 @@
                             this.$.wash.classList.remove('protein_killer');
                             this.$.wash.classList.add('detergent');
                             break;
+                        default:
+                            this.$.wash.classList.remove('none');
+                            this.$.wash.classList.remove('water');
+                            this.$.wash.classList.remove('protein_killer');
+                            this.$.wash.classList.remove('detergent');
                     }
-                }
+                //}
             }
         })
     </script>

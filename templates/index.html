@@ -10,17 +10,23 @@
 
     <script src="{{ url_for('static', filename='bower_components/webcomponentsjs/webcomponents.js') }}"></script>
     <script src="{{ url_for('static', filename='bower_components/knockout/dist/knockout.js') }}"></script>
+    <script src="{{ url_for('static', filename='bower_components/underscore/underscore-min.js') }}"></script>
 
     <link rel="import" href="{{ url_for('static', filename='bower_components/font-roboto/roboto.html') }}">
     <link rel="import" href="{{ url_for('static', filename='bower_components/core-scaffold/core-scaffold.html') }}">
     <link rel="import" href="{{ url_for('static', filename='bower_components/core-item/core-item.html') }}">
     <link rel="import" href="{{ url_for('static', filename='bower_components/core-menu/core-menu.html') }}">
     <link rel="import" href="{{ url_for('static', filename='bower_components/core-pages/core-pages.html') }}">
-    <link rel="import" href="{{ url_for('static', filename='bower_components/core-pages/core-pages.html') }}">
     <link rel="import" href="{{ url_for('static', filename='bower_components/core-tooltip/core-tooltip.html') }}">
+    <link rel="import" href="{{ url_for('static', filename='bower_components/core-a11y-keys/core-a11y-keys.html') }}">
     <link rel="import" href="{{ url_for('static', filename='bower_components/paper-button/paper-button.html') }}">
     <link rel="import" href="{{ url_for('static', filename='bower_components/paper-fab/paper-fab.html') }}">
     <link rel="import" href="{{ url_for('static', filename='bower_components/paper-dialog/paper-dialog.html') }}">
+    <link rel="import" href="{{ url_for('static', filename='bower_components/slickgrid-element/slickgrid-element.html') }}">
+    <link rel="import" href="{{ url_for('static', filename='bower_components/auto-complete/auto-complete.html') }}">
+    <link rel="import" href="{{ url_for('static', filename='bower_components/file-input/file-input.html') }}">
+    <link rel="import" href="{{ url_for('static', filename='bower_components/paper-toast/paper-toast.html') }}">
+    <link rel="import" href="{{ url_for('static', filename='sample-table.html') }}">
     <link rel="import" href="{{ url_for('static', filename='card-grid.html') }}">
 
 
@@ -95,6 +101,19 @@
             font-weight: bold;
             color: white;
         }
+        .file-button {
+            font-weight: bold;
+            color: white;
+            background-color: dodgerblue;
+        }
+        .import-button {
+            font-weight: bold;
+            color: white;
+            background-color: #32cd32;
+        }
+        .import-button.disabled {
+            background-color: #c1c1c1;
+        }
         .abort-button {
             background: #ec5e54;
         }
@@ -122,7 +141,7 @@
 
             if (classes.contains("scan-button") || classes.contains("initialise-button")) {
                 var grid = document.querySelector('card-grid');
-                var scan_type = grid.cardtype
+                var scan_type = grid.cardtype;
                 var action = 'scan';
                 if (classes.contains("initialise-button")) {
                     action = 'initialise'
@@ -138,51 +157,178 @@
 </head>
 
 <body unresolved>
-<core-scaffold drawerWidth=200px>
-    <core-header-panel navigation flex mode="seamed">
-        <core-toolbar data-bind="css: { disconnected: !connected() }">Plate Scanner</core-toolbar>
-        <core-menu theme="core-light-theme">
-            <core-item icon="settings" label="Plate Detail"></core-item>
-            <core-item icon="settings" label="Scan"></core-item>
-        </core-menu>
-    </core-header-panel>
-    <div id="pageName" tool data-bind="text: pageName"></div>
-    <core-tooltip tool label="Load" noarrow="True">
-        <paper-fab id="load" icon="open-in-browser" mini="True" class="save_button"></paper-fab>
-    </core-tooltip>
-    <core-tooltip tool label="Save" noarrow="True">
-        <paper-fab id="save" tool icon="save" mini="True" class="save_button"></paper-fab>
-    </core-tooltip>
-    <core-pages selected="0">
-        <div>
-            <!--<card-grid data-bind="attr: {width: width}"></card-grid>   If I want to control width of grid from this level-->
-            <card-grid></card-grid>
-        </div>
-        <div>
-            <paper-button raised data-bind="click: handleAction" class="action-button scan-button">
-                Scan
-            </paper-button>
-            <paper-button raised data-bind="click: handleAction" class="action-button initialise-button">
-                Initialise
-            </paper-button>
-            <paper-button raised data-bind="click: handleAction" class="action-button abort-button">
-                Abort
-            </paper-button>
-        </div>
-    </core-pages>
-</core-scaffold>
+    <template id="auto-bind" is="auto-binding">
+        <core-scaffold drawerWidth=200px>
+            <core-header-panel navigation flex mode="seamed">
+                <core-toolbar class="disconnected">Plate Scanner</core-toolbar>
+                <core-menu theme="core-light-theme" selected="2">
+                    <core-item icon="settings" label="Plate Import"></core-item>
+                    <core-item icon="settings" label="Plate Table"></core-item>
+                    <core-item icon="settings" label="Plate Layout"></core-item>
+                    <core-item icon="settings" label="Scan"></core-item>
+                </core-menu>
+            </core-header-panel>
+            <div id="pageName" tool>{{ "{{ currentPlate }}" }}</div>
+            <core-tooltip tool label="Load" noarrow="True">
+                <paper-fab id="load" icon="open-in-browser" mini="True" class="save_button" on-tap="{{ "{{handleLoadDialog}}" }}"></paper-fab>
+            </core-tooltip>
+            <core-tooltip tool label="Save" noarrow="True">
+                <paper-fab id="save" tool icon="save" mini="True" class="save_button" on-tap="{{ "{{handleSaveDialog}}" }}"></paper-fab>
+            </core-tooltip>
+            <core-pages selected="2">
+                <div>
+                    <file-input accept='["csv", "dat", "txt"]' class="btn btn-primary" extensions='["csv", "dat", "txt"]' maxSize="3000000" on-change = "{{ "{{ handleFileSelect }}" }}">
+                        <paper-button raised class="file-button">Select a file</paper-button>
+                    </file-input>
+                    <paper-button id="importbutton" raised disabled class="import-button disabled" on-tap="{{ "{{handleImport}}" }}">Import</paper-button>
+                    <paper-dropdown-menu id="typedrop" label="Plate Type">
+                        <paper-dropdown class="dropdown" duration="50">
+                            <core-menu class="menu">
+                                <paper-item>Standard</paper-item>
+                                <paper-item>Protein</paper-item>
+                            </core-menu>
+                        </paper-dropdown>
+                    </paper-dropdown-menu>
+                    <template bind = "{{ "{{ importgrid }}" }}">
+                        <slickgrid-element columns = "{{ "{{ columns }}" }}" data = "{{ "{{ data }}" }}" showenablesingleclick = "false"></slickgrid-element>
+                    </template>
+                </div>
+                <div>
+                    <sample-table samples="{{ "{{ samples }}" }}" ignoredkeys="{{ "{{ ignoredkeys }}" }}" updated="{{ "{{ samplesupdated }}" }}"></sample-table>
+                </div>
+                <div>
+                    <!--<card-grid data-bind="attr: {width: width}"></card-grid>   If I want to control width of grid from this level-->
+                    <card-grid id="cards" samples="{{ "{{ samples }}" }}"></card-grid>
+                </div>
+                <div>
+                    <paper-button raised data-bind="click: handleAction" class="action-button scan-button">
+                        Scan
+                    </paper-button>
+                    <paper-button raised data-bind="click: handleAction" class="action-button initialise-button">
+                        Initialise
+                    </paper-button>
+                    <paper-button raised data-bind="click: handleAction" class="action-button abort-button">
+                        Abort
+                    </paper-button>
+                </div>
+            </core-pages>
+        </core-scaffold>
+        <paper-dialog id="save_dialog">
+            <paper-input id="save_name" label="Plate Name" autofocus></paper-input>
+            <core-a11y-keys target="{{ "{{$.save_name}}"  }}" keys="enter" on-keys-pressed="{{ "{{handleSave}}" }}"></core-a11y-keys>
+            <paper-button affirmative on-tap="{{ "{{handleSave}}" }}" style="color: #03a9f4;">Save</paper-button>
+            <paper-button affirmative on-tap="{{ "{{handleSaveCancel}}" }}">Cancel</paper-button>
+        </paper-dialog>
+        <paper-dialog id="load_dialog">
+            <auto-complete id="autocomplete" data="{{ "{{platelist}}" }}" search="{{ "{{load_name}}" }}"></auto-complete>
+            <paper-button affirmative autofocus on-tap="{{ "{{handleLoad}}" }}" style="color: #03a9f4; margin-top: 30px;">Load</paper-button>
+            <paper-button affirmative on-tap="{{ "{{handleLoadCancel}}" }}">Cancel</paper-button>
+        </paper-dialog>
+        <paper-dialog id="overwrite_dialog">
+            <paper-button affirmative autofocus on-tap="{{ "{{handleOverwrite}}" }}" style="color: #03a9f4; margin-top: 30px;">Load</paper-button>
+            <paper-button affirmative on-tap="{{ "{{handleOverwriteCancel}}" }}">Cancel</paper-button>
+        </paper-dialog>
+        <paper-toast id="choosetypetoast" text="Choose Plate Type"></paper-toast>
+    </template>
 </body>
 
 <script>
 
-    var currentPageModel = {
-        pageName: ko.observable('New Plate'),
-        currentPlate: ko.observable('New Plate'),
-        connected: ko.observable(0)/*,
-        width: ko.observable(10)  If I want to control width of grid from this level*/
+
+    //polymer bindings
+    var template = document.querySelector('#auto-bind');
+
+    template.currentPlate = 'New Plate';
+    template.connected = 0;
+
+    template.samples = {};
+    template.samplesupdated = 0;
+    template.load_name = '';
+
+    template.ignoredkeys = ['uid', 'selected', 'highlighted', 'focused', 'data'];
+
+    template.handleLoadDialog = function(){
+        template.$.load_dialog.toggle();
+        sendText(JSON.stringify({action: 'platelist'}));
     };
 
-    ko.applyBindings(currentPageModel, document.querySelector("body"));
+    template.handleLoad = function(){
+        sendText(JSON.stringify({action: 'load', load_name: this.load_name}));
+        template.$.autocomplete.clear();
+        template.$.load_dialog.toggle();
+    };
+
+    template.handleLoadCancel = function(){
+        template.$.autocomplete.clear();
+        template.$.load_dialog.toggle();
+    };
+
+    template.handleSaveDialog = function(){
+        template.$.save_dialog.toggle();
+    };
+
+    template.handleSave = function(){
+        sendText(JSON.stringify({action: 'save', data: {plate_name: template.$.save_name.value, cardtype: template.$.cards.cardtype, gridwidth: template.$.cards.gridwidth,
+            cardheight: template.$.cards.cardheight, data: template.samples}}));
+        template.$.save_dialog.toggle();
+    };
+
+    template.handleSaveCancel = function(){
+        template.$.save_name.value = "";
+        template.$.save_dialog.toggle();
+    };
+
+    template.handleFileSelect = function(event){
+        var reader = new FileReader();
+        var self = this;
+
+        reader.onload = function(event){
+            sendText(JSON.stringify({action: "import", data: event.target.result}));
+        };
+
+        event.detail.valid.forEach(function(e){
+            reader.readAsText(e);
+        });
+    };
+
+    template.handleImport = function() {
+        switch (template.$.typedrop.selectedItemLabel) {
+            case "Standard":
+                template.$.cards.add8x5grid();
+                setTimeout(template.updateCards, 10);
+                break;
+            case "Protein":
+                template.$.cards.add96well();
+                setTimeout(template.updateCards, 10);
+                break;
+            default:
+                template.$.choosetypetoast.show();
+                break;
+        }
+    };
+
+    template.updateCards = function(){
+        fields = _.difference(Object.keys(template.samples.samples[0]), template.ignoredkeys);
+        datafields = Object.keys(template.samples.samples[0].data);
+        console.log(fields);
+        console.log(datafields);
+        JSON.parse(template.importgrid.data).forEach(function(e,index){
+            fields.forEach(function(f){
+                template.samples.samples[index][f] = e[f];
+            });
+            datafields.forEach(function(f){
+                template.samples.samples[index].data[f] = e[f];
+            });
+        });
+    };
+
+    template.plategrid = {};
+    template.plategrid.columns = JSON.stringify[{}];
+    template.plategrid.data = JSON.stringify([]);
+
+    template.importgrid = {};
+    template.importgrid.columns = JSON.stringify([]);
+    template.importgrid.data = JSON.stringify([]);
 
     //websocket stuff
 
@@ -193,7 +339,36 @@
 
         socket.onmessage = function (e) {
             if (typeof e.data == "string") {
-                console.log("Text message received: " + e.data);
+                console.log("Text message received");
+                message = JSON.parse(e.data);
+
+                switch (message.action){
+                    case  'platelist':
+                        template.platelist = message.data;
+                        break;
+                    case 'load':
+                        cards = template.$.cards;
+                        cards.cardtype = message.data.cardtype;
+                        cards.gridwidth = message.data.gridwidth;
+                        cards.cardheight = message.data.cardheight;
+                        cards.samples.uid = message.data.data.uid;
+                        cards.samples.focussed_sample = message.data.data.focussed_sample;
+                        cards.samples.samples = message.data.data.samples;
+                        break;
+                    case 'overwrite':
+                        break;
+                    case 'import':
+                        temparray = [];
+                        message.columns.forEach(function(e){
+                            temparray.push({id: e, name: e, field: e})
+                        });
+                        template.importgrid.columns = JSON.stringify(temparray);
+                        template.importgrid.data = JSON.stringify(message.data);
+                        template.$.importbutton.classList.remove('disabled');
+                        template.$.importbutton.disabled = false;
+                        break;
+                }
+
             } else {
                 var arr = new Uint8Array(e.data);
                 var hex = '';
@@ -203,13 +378,6 @@
                 console.log("Binary message received: " + hex);
             }
         };
-        socket.onclose = function (e) {
-            console.log("Connection closed.");
-            socket = null;
-            isopen = false;
-            currentPageModel.connected(0);
-            setTimeout(connect, 5000);
-        }
     };
 
     function connect() {
@@ -219,15 +387,24 @@
         socket.onopen = function () {
             console.log("Connected!");
             isopen = true;
-            currentPageModel.connected(1);
+            template.connected = 1;
+            document.querySelector('core-toolbar').classList.remove("disconnected");
         };
         socket.onerror = function(evt){
             if (!isopen){
-                setTimeout(connect, 5000);
+                //console.log(evt.data);
+                //setTimeout(connect, 5000);
             }
+        };
+        socket.onclose = function (e) {
+            console.log("Connection closed.");
+            socket = null;
+            isopen = false;
+            template.connect = 0;
+            document.querySelector('core-toolbar').classList.add("disconnected");
+            setTimeout(connect, 5000);
         }
     }
-
 
     function sendText(message) {
         if (isopen) {
@@ -250,35 +427,35 @@
         }
     }
 
-    var menu = document.querySelector('core-menu');
+    template.addEventListener('template-bound', function() {
 
-    menu.addEventListener('core-select', function (evt) {
-        if (evt.detail.isSelected) {
-            var scaffold = document.querySelector('core-scaffold');
-            if (menu.selectedItem.label == 'Plate Detail') {
-                currentPageModel.pageName(currentPageModel.currentPlate());
-            } else {
-                currentPageModel.pageName(menu.selectedItem.label);
+        var menu = document.querySelector('core-menu');
+
+        menu.addEventListener('core-select', function (evt) {
+            if (evt.detail.isSelected) {
+                var scaffold = document.querySelector('core-scaffold');
+                if (menu.selectedItem.label == 'Plate Table') {
+                    template.samplesupdated += 1;
+                }
+                var pages = document.querySelector('core-pages');
+                pages.selected = menu.selected;
+
+                scaffold.togglePanel();
             }
-
-            var pages = document.querySelector('core-pages');
-            pages.selected = menu.selected;
-
-            scaffold.togglePanel();
-        }
+        });
     });
 
-    var save = document.querySelector('#save')
+    /*var save = document.querySelector('#save');
 
     save.addEventListener('tap', function(evt){
         console.log('save');
     });
 
-    var load = document.querySelector('#load')
+    var load = document.querySelector('#load');
 
     load.addEventListener('tap', function(evt){
         console.log('load');
-    });
+    });*/
 
     /*var scan = document.querySelector('paper-button');
     var abort = document.querySelector('paper-button');

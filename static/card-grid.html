@@ -122,17 +122,17 @@
             </div>
             </div>
             <ul id='sortable' class='sortable' on-mousedown = "{{ mousedown }}" on-mousemove= "{{ mousemove }}" on-mouseup = "{{ mouseup }}">
-                <template repeat="{{sample in samples.samples}}">
+                <template repeat="{{sample, index in samples.samples}}">
                     <li>
                         <!--<sample-scan-card sample = "{{ sample }}" on-more-tap="{{ handleMore }}" on-clear-tap="{{ handleClear }}" on-delete-tap="{{ handleClear }}"></sample-scan-card>-->
-                        <card-chooser card = "{{ cardtype }}" sample = "{{ sample }}" on-more-tap="{{ handleMore }}" on-clear-tap="{{ handleClear }}" on-delete-tap="{{ handleClear }}" on-tap="{{ handleFocus }}" class="test"></card-chooser>
+                        <card-chooser cardnum = "{{ index }}" card = "{{ cardtype }}" sample = "{{ sample }}" on-more-tap="{{ handleMore }}" on-clear-tap="{{ handleClear }}" on-delete-tap="{{ handleClear }}" on-tap="{{ handleFocus }}" on-dragend="{{ handleDragEnd }}" class="test"></card-chooser>
                     </li>
                 </template>
             </ul>
         </div>
         <paper-dialog id = "more_dialog">
             <template bind="{{ samples.selected_sample as sample }}">
-                <card-chooser full = "true" card = "{{ cardtype }}" sample = "{{ sample }}" on-more-tap="{{ handleMore }}" on-clear-tap="{{ handleClear }}" on-delete-tap="{{ handleClear }}" on-focus="{{ handleFocus }}"></card-chooser>
+                <card-chooser full = "true" card = "{{ cardtype }}" sample = "{{ sample }}" on-more-tap="{{ handleMore }}" on-clear-tap="{{ handleClear }}" on-delete-tap="{{ handleClear }}" on-tap="{{ handleFocus }}"></card-chooser>
             </template>
         </paper-dialog>
     </template>
@@ -159,9 +159,22 @@
                 cardtype: {
                     value: 'plate40',
                     reflect: true
+                },
+                samples: {
+                    value: {},
+                    reflect: true
                 }
             },
             icon: "add",
+            handleDragEnd: function(event, detail, sender){
+                cards = [].slice.call(this.$.sortable.children);
+                cards = cards.slice(1);
+                var order = [];
+                cards.forEach(function(e){
+                    order.push(e.children[0].cardnum);
+                });
+                this.samples.order = order;
+            },
             handleHoverAdd: function (event, detail, sender) {
                 var self = this;
 
@@ -203,18 +216,24 @@
             },
             handleAddCard: function (event, detail, sender) {
                 if (sender.id == 'add8x5grid') {
-                    this.gridwidth = 8;
-                    this.cardheight = 140;
-                    this.cardtype = 'plate40';
-                    this.samples.new_grid(40);
+                    this.add8x5grid();
                 } else if (sender.id == 'add96Well') {
-                    this.gridwidth = 12;
-                    this.cardheight = 200;
-                    this.cardtype = 'protein';
-                    this.samples.new_grid(24);
+                    this.add96well();
                 } else {
                     this.samples.add_sample();
                 }
+            },
+            add8x5grid: function(){
+                this.gridwidth = 8;
+                this.cardheight = 140;
+                this.cardtype = 'plate40';
+                this.samples.new_grid(40);
+            },
+            add96well: function(){
+                this.gridwidth = 12;
+                this.cardheight = 200;
+                this.cardtype = 'protein';
+                this.samples.new_grid(24);
             },
             handleSelectAll: function (event, detail, sender) {
                 this.samples.select_all(true)
@@ -247,7 +266,7 @@
                     var list = event.target.children;
 
                     for (var i = 1; i < list.length; i++) {
-                        this.rectangles.push(list[i].getBoundingClientRect());
+                        this.rectangles.push({sampleuid: list[i].uid, sampleNum: i-1, rectangle: list[i].getBoundingClientRect()});
                     }
                 }
             },
@@ -257,27 +276,28 @@
                     var rect = {left: Math.min(this.position1[0], event.x), right: Math.max(this.position1[0], event.x),
                                 top:  Math.min(this.position1[1], event.y), bottom: Math.max(this.position1[1], event.y)};
                     this.rectangles.forEach(function(e, index) {
-                        overlapped = overlap(rect, e);
+                        overlapped = overlap(rect, e.rectangle);
                         switch (self.select_type){
                             case 'select':
-                                self.samples.samples[index].selected = overlapped;
+                                self.samples.samples[e.sampleNum].selected = overlapped;
                                 break;
                             case 'add':
                                 if (overlapped) {
-                                    self.samples.samples[index].selected = true;
+                                    self.samples.samples[e.sampleNum].selected = true;
                                 }
                                 break;
                             case 'deselect':
                                 if (overlapped) {
-                                    self.samples.samples[index].selected = false;
+                                    self.samples.samples[e.sampleNum].selected = false;
                                 }
                                 break;
                         }
-                        self.samples.samples[index].highlighted = overlapped;
+                        self.samples.samples[e.sampleNum].highlighted = overlapped;
                     })
                 }
             },
             mouseup: function(event){
+                console.log('mouseup');
                 if (this.selecting == true) {
                     var self = this;
                     this.style.cursor = 'auto';
@@ -285,23 +305,23 @@
                     var rect = {left: Math.min(this.position1[0], event.x), right: Math.max(this.position1[0], event.x),
                                 top:  Math.min(this.position1[1], event.y), bottom: Math.max(this.position1[1], event.y)};
                     this.rectangles.forEach(function(e, index) {
-                        overlapped = overlap(rect, e);
+                        overlapped = overlap(rect, e.rectangle);
                         switch (self.select_type){
                             case 'select':
-                                self.samples.samples[index].selected = overlapped;
+                                self.samples.samples[e.sampleNum].selected = overlapped;
                                 break;
                             case 'add':
                                 if (overlapped) {
-                                    self.samples.samples[index].selected = true;
+                                    self.samples.samples[e.sampleNum].selected = true;
                                 }
                                 break;
                             case 'deselect':
                                 if (overlapped) {
-                                    self.samples.samples[index].selected = false;
+                                    self.samples.samples[e.sampleNum].selected = false;
                                 }
                                 break;
                         }
-                        self.samples.samples[index].highlighted = false;
+                        self.samples.samples[e.sampleNum].highlighted = false;
                     })
                 }
             },
@@ -311,8 +331,6 @@
                 var sortable = this.$.sortable;
 
                 nativesortable(sortable, {
-                    change: function () {
-                    },
                     warp: false //With warp true elements swap places
                 });
 
@@ -320,17 +338,20 @@
                     var self = this;
                     self.uid = 0;
                     self.samples = [];
+                    self.order = [];
                     self.selected_sample = {};
                     self.focussed_sample = {};
                     self.add_sample = function () {
-                        self.samples.push({'uid': self.uid, 'selected': false, 'highlighted': false, 'focused': false, 'data': {}});
+                        self.samples.push({'uid': self.uid, 'selected': false, 'highlighted': false, 'focused': false, samplename: '', subgrid: false, description: '', 'data': {}});
+                        self.order.push(self.order.length);
                         self.uid++;
                     };
                     self.new_grid = function (number) {
                         self.uid = 0;
                         self.samples = [];
+                        self.order = [];
                         for (var i = 0; i < number; i++) {
-                            self.add_sample()
+                            self.add_sample();
                         }
                         self.selected_sample = self.samples[0]
                     };
@@ -340,9 +361,15 @@
                         self.samples.some(function (sample) {
                             if (sample.uid == uid) {
                                 if (clearonly == true) {
-                                    self.samples[index] = {'uid': uid, 'selected': false, 'highlighted': false, 'focused': false, 'data': {}}
+                                    self.samples[index] = {'uid': uid, 'selected': false, 'highlighted': false, 'focused': false, samplename: '', subgrid: false, description: '', 'data': {}}
                                 } else {
                                     self.samples.splice(index, 1);
+                                    ordertmp = self.order.splice(0, index);
+                                    self.order.splice(0, 1);
+                                    self.order.forEach(function(e){
+                                        ordertmp.push(e-1);
+                                    });
+                                    self.order=ordertmp;
                                 }
                                 return true
                             }
@@ -375,6 +402,16 @@
                     self.fill = function(type) {
                         switch (type){
                             case 'right':
+                                self.samples.forEach(function (sample) {
+                                   if (sample.selected) {
+                                        sample.samplename = self.focussed_sample.samplename;
+                                        sample.description = self.focussed_sample.description;
+                                        sample.data = {};
+                                        for (var attr in self.focussed_sample.data){
+                                            sample.data[attr] = self.focussed_sample.data[attr]
+                                        }
+                                    }
+                                });
                                 break;
                             case 'selected':
                                 self.samples.forEach(function (sample) {

@@ -1,8 +1,14 @@
+import cPickle as pickle
+from cStringIO import StringIO
+from contextlib import closing # Won't need this in python3 as stringio supports with in python3
+import csv
 from autobahn.asyncio.websocket import WebSocketServerProtocol, WebSocketServerFactory
 import json
 import beamline
 from devices import ScannerConfig
-from redis import ConnectionError
+from redis import ConnectionError, StrictRedis
+
+r = StrictRedis()
 
 
 class PlateServerProtocol(WebSocketServerProtocol):
@@ -16,6 +22,7 @@ class PlateServerProtocol(WebSocketServerProtocol):
                        'hole_size': 5
                        }
                       }
+
 
     try:
         scanner = beamline.scan_saxs
@@ -31,19 +38,51 @@ class PlateServerProtocol(WebSocketServerProtocol):
     def onMessage(self, payload, isBinary):
         print("Message Received")
 
-        payload = json.loads(payload.decode('utf8'))
+        try:
+            payload = json.loads(payload.decode('utf8'))
 
-        if payload['action'] == 'abort':
-            self.scanner.abort(polite=self.abort_count == 0)
-            self.abort_count += 1
+            if payload['action'] == 'save':
+                self.save(payload['data'])
 
-        if payload['action'] == 'initialise':
-            self.initialiseScan(payload['scan_type'], payload['data'])
+            if payload['action'] == 'load':
+                self.load(payload['load_name'])
 
-        if payload['action'] == 'scan':
-            self.initialiseScan(payload['scan_type'], payload['data'])
-            self.abort_count = 0
-            self.scanner.start(level=2)
+            if payload['action'] == 'platelist':
+                message = json.dumps({'action': 'platelist', 'data': r.hkeys('plate_scans',)})
+                self.sendMessage(message)
+
+            if payload['action'] == 'import':
+                with closing(StringIO(payload['data'])) as fileobj:
+                    reader = csv.DictReader(fileobj)
+
+                    data = []
+                    for row in reader:
+                        data.append(row)
+                    message = json.dumps({'action': 'import', 'columns': reader.fieldnames, 'data': data})
+                self.sendMessage(message)
+
+            if payload['action'] == 'abort':
+                self.scanner.abort(polite=self.abort_count == 0)
+                self.abort_count += 1
+
+            if payload['action'] == 'initialise':
+                self.initialiseScan(payload['scan_type'], payload['data'])
+
+            if payload['action'] == 'scan':
+                self.initialiseScan(payload['scan_type'], payload['data'])
+                self.abort_count = 0
+                self.scanner.start(level=2)
+        except:
+            print 'error'
+            pass
+
+    def save(self, data):
+        r.hset('plate_scans', data['plate_name'], pickle.dumps(data))
+
+    def load(self, name):
+        message = json.dumps({'action': 'load', 'load_name': name,
+                              'data': pickle.loads(r.hget('plate_scans', name))})
+        self.sendMessage(message)
 
     def initialiseScan(self, scan_type, scan_data):
 

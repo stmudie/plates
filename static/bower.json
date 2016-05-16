@@ -17,6 +17,12 @@
     "paper-elements": "Polymer/paper-elements#~0.5.1",
     "core-elements": "Polymer/core-elements#~0.5.1",
     "knockout": "~3.2.0",
-    "nativesortable": "~0.0.1"
+    "nativesortable": "~0.0.1",
+    "slickgrid-element": "*",
+    "auto-complete": "*",
+    "slickgrid": "~2.1.0",
+    "jquery-ui": "~1.11.4",
+    "file-input": "~1.1.4",
+    "underscore": "~1.8.3"
   }
 }

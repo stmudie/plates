@@ -206,9 +206,9 @@
                     e.preventDefault();
                 }
             }
-            if (this === currentlyDraggingElement) {
+            /*if (this === currentlyDraggingElement) {
                 return;
-            }
+            }*/
 
             if (warp) {
                 var thisSibling = currentlyDraggingElement.nextSibling;
